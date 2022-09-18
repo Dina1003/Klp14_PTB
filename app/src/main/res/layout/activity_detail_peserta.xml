@@ -104,7 +104,7 @@
         app:layout_constraintTop_toBottomOf="@+id/nama_peserta" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/detail_peserta2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"

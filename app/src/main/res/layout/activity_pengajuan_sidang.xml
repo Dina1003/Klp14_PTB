@@ -5,7 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFFFF"
-    tools:context=".PopUp">
+    tools:context=".Pengajuan_Sidang">
+
+    <Button
+        android:id="@+id/pengajuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_kostum"
+        android:text="Ajukan"
+        android:onClick="ajukan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/Head"
@@ -15,7 +28,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_background_atas" />
-
     <ImageView
         android:id="@+id/logo"
         android:layout_width="53dp"
@@ -26,6 +38,17 @@
         app:layout_constraintTop_toTopOf="@+id/Head"
         app:srcCompat="@drawable/logo_unand" />
 
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:onClick="pindah"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Head"
+        app:srcCompat="@drawable/ic_back"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/nama"
@@ -36,8 +59,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="  Name"
-        android:textColor="#A6000000"
-        android:background="@drawable/transparan_costum"
+        android:textColor="@color/black"
+        android:background="@drawable/text_kostum"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Head" />
 
@@ -49,8 +72,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="  Nim"
-        android:textColor="#A6000000"
-        android:background="@drawable/transparan_costum"
+        android:textColor="@color/black"
+        android:background="@drawable/text_kostum"
         app:layout_constraintEnd_toEndOf="@+id/nama"
         app:layout_constraintStart_toStartOf="@+id/nama"
         app:layout_constraintTop_toBottomOf="@+id/nama" />
@@ -63,8 +86,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="  Angkatan"
-        android:textColor="#A6000000"
-        android:background="@drawable/transparan_costum"
+        android:textColor="@color/black"
+        android:background="@drawable/text_kostum"
         app:layout_constraintEnd_toEndOf="@+id/nim"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/nim"
@@ -78,8 +101,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="  Jurusan"
-        android:textColor="#A6000000"
-        android:background="@drawable/transparan_costum"
+        android:textColor="@color/black"
+        android:background="@drawable/text_kostum"
         app:layout_constraintEnd_toEndOf="@+id/angkatan"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/angkatan"
@@ -93,8 +116,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="  Judul TA"
-        android:textColor="#A6000000"
-        android:background="@drawable/transparan_costum"
+        android:textColor="@color/black"
+        android:background="@drawable/text_kostum"
         app:layout_constraintEnd_toEndOf="@+id/jurusan"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/jurusan"
@@ -106,53 +129,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Laporan TA+"
-        android:background="#A6007AFF"
         app:layout_constraintStart_toStartOf="@+id/judul_TA"
         app:layout_constraintTop_toBottomOf="@+id/judul_TA" />
 
-    <Button
-        android:id="@+id/makalah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Makalah Seminar Hasil+"
-        android:background="#A6007AFF"
-        app:layout_constraintStart_toStartOf="@+id/laporan_ta"
-        app:layout_constraintTop_toBottomOf="@+id/laporan_ta" />
 
-    <Button
-        android:id="@+id/pengajuan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:background="#A6007AFF"
-        android:text="Ajukan"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-    <ImageView
-        android:id="@+id/berhasil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Head"
-        app:srcCompat="@drawable/ic_popup" />
 
-    <ImageView
-        android:id="@+id/ok"
-        android:layout_width="42dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="265dp"
-        android:layout_marginEnd="100dp"
-        android:onClick="ok"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Head"
-        app:srcCompat="@drawable/ic_ok"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

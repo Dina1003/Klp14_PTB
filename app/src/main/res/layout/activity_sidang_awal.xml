@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFFFF"
-    tools:context=".Peserta">
-
+    tools:context=".Sidang_Awal">
     <ImageView
         android:id="@+id/Head"
         android:layout_width="406dp"
@@ -32,83 +31,59 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:onClick="pindah"
+        android:onClick="semhas"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Head"
         app:srcCompat="@drawable/ic_back"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <ImageView
-        android:id="@+id/judul_peserta_Semhas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Head"
-        app:srcCompat="@drawable/ic_teks_peserta" />
-
-
-    <Button
-        android:id="@+id/input_peserta"
+        android:id="@+id/Button_Pengajuan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="Input Peserta"
-        android:onClick="input"
+        android:onClick="form"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/nama_peserta"
-        android:layout_width="350dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/text_kostum"
-        android:text="  Budi"
-        android:textAllCaps="false"
-        android:textSize="15dp"
-        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/judul_peserta_Semhas" />
-
-    <TextView
-        android:id="@+id/peserta_2"
-        android:layout_width="350dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/text_kostum"
-        android:text="  Hana"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/nama_peserta"
-        app:layout_constraintStart_toStartOf="@+id/nama_peserta"
-        app:layout_constraintTop_toBottomOf="@+id/nama_peserta" />
-
-    <ImageView
-        android:id="@+id/detail_peserta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="10dp"
-        android:onClick="deatil"
-        app:layout_constraintEnd_toEndOf="@+id/nama_peserta"
-        app:layout_constraintTop_toTopOf="@+id/nama_peserta"
-        app:srcCompat="@drawable/ic_bukalist"
+        app:srcCompat="@drawable/ic_button_pengajuan"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-    <ImageView
-        android:id="@+id/detail_peserta2"
+    <TextView
+        android:id="@+id/text_jadwal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/peserta_2"
-        app:layout_constraintTop_toTopOf="@+id/peserta_2"
-        app:srcCompat="@drawable/ic_bukalist" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Jum'at/ 21-10-2022"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sidang_text" />
+
+    <ImageView
+        android:id="@+id/button_bukaList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="40dp"
+        android:onClick="pindah"
+        app:layout_constraintStart_toEndOf="@+id/text_jadwal"
+        app:layout_constraintTop_toBottomOf="@+id/Sidang_text"
+        app:srcCompat="@drawable/ic_bukalist"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+
+    <ImageView
+        android:id="@+id/Sidang_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Head"
+        app:srcCompat="@drawable/ic_teks_sidangakhir"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

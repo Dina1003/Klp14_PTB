@@ -20,7 +20,7 @@ public class DetailPeserta extends AppCompatActivity {
     }
 
     public void back(View view) {
-        Intent intent = new Intent(DetailPeserta.this, MainActivity.class);
+        Intent intent = new Intent(DetailPeserta.this, Semhas_Awal.class);
         startActivity(intent);
     }
 

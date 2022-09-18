@@ -6,26 +6,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class DetailSemHas extends AppCompatActivity {
+public class DetailSidang extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_sem_has);
+        setContentView(R.layout.activity_detail_sidang);
     }
 
     public void back(View view) {
-        Intent intent = new Intent(DetailSemHas.this, Semhas_Awal.class);
+        Intent intent = new Intent(DetailSidang.this, Sidang_Awal.class);
         startActivity(intent);
     }
 
     public void kembali(View view) {
-        Intent intent = new Intent(DetailSemHas.this, Semhas_Awal.class);
-        startActivity(intent);
-    }
-
-    public void peserta(View view) {
-        Intent intent = new Intent(DetailSemHas.this, Peserta.class);
+        Intent intent = new Intent(DetailSidang.this, Sidang_Awal.class);
         startActivity(intent);
     }
 }

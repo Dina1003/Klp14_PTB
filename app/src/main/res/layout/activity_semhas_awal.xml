@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFFFF"
-    tools:context=".MainActivity">
+    tools:context=".Semhas_Awal">
 
     <ImageView
         android:id="@+id/Head"
@@ -48,7 +48,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_button_pengajuan" />
+        app:srcCompat="@drawable/ic_button_pengajuan"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <ImageView
         android:id="@+id/SemHas_Text"
@@ -80,6 +81,18 @@
         android:onClick="pindah"
         app:layout_constraintStart_toEndOf="@+id/text_jadwal"
         app:layout_constraintTop_toBottomOf="@+id/SemHas_Text"
-        app:srcCompat="@drawable/ic_bukalist" />
+        app:srcCompat="@drawable/ic_bukalist"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="Cek sidang"
+        android:onClick="sidang"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

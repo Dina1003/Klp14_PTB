@@ -15,7 +15,7 @@ public class FormPengajuan extends AppCompatActivity {
     }
 
     public void pindah(View view) {
-        Intent intent = new Intent(FormPengajuan.this, MainActivity.class);
+        Intent intent = new Intent(FormPengajuan.this, Semhas_Awal.class);
         startActivity(intent);
     }
 

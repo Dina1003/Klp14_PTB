@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFFFF"
-    tools:context=".PopUp">
+    tools:context=".PopUp_Sidang">
 
     <ImageView
         android:id="@+id/Head"
@@ -111,16 +111,6 @@
         app:layout_constraintTop_toBottomOf="@+id/judul_TA" />
 
     <Button
-        android:id="@+id/makalah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Makalah Seminar Hasil+"
-        android:background="#A6007AFF"
-        app:layout_constraintStart_toStartOf="@+id/laporan_ta"
-        app:layout_constraintTop_toBottomOf="@+id/laporan_ta" />
-
-    <Button
         android:id="@+id/pengajuan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -153,6 +143,8 @@
         app:layout_constraintTop_toBottomOf="@+id/Head"
         app:srcCompat="@drawable/ic_ok"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
