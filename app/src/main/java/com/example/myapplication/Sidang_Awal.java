@@ -24,9 +24,8 @@ public class Sidang_Awal extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void semhas(View view) {
+    public void semhaskembali(View view) {
         Intent intent = new Intent(Sidang_Awal.this, Semhas_Awal.class);
         startActivity(intent);
     }
-
 }
