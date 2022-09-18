@@ -86,7 +86,8 @@
         android:onClick="pindah"
         app:layout_constraintEnd_toEndOf="@+id/nama_peserta"
         app:layout_constraintTop_toTopOf="@+id/nama_peserta"
-        app:srcCompat="@drawable/ic_bukadetail" />
+        app:srcCompat="@drawable/ic_bukadetail"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/peserta_2"
