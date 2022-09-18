@@ -2,30 +2,25 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.content.Intent;
 
-
-public class MainActivity extends AppCompatActivity {
+public class FormPengajuan extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
+        setContentView(R.layout.activity_form_pengajuan);
     }
 
-    public void form(View view) {
-        Intent intent = new Intent(MainActivity.this, FormPengajuan.class);
+    public void pindah(View view) {
+        Intent intent = new Intent(FormPengajuan.this, MainActivity.class);
         startActivity(intent);
     }
 
-
-    public void pindah(View view) {
-        Intent intent = new Intent(MainActivity.this, DetailSemHas.class);
+    public void ajukan(View view) {
+        Intent intent = new Intent(FormPengajuan.this, PopUp.class);
         startActivity(intent);
     }
 }
