@@ -13,9 +13,11 @@
         android:layout_height="62dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
+        android:onClick="profil"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_profile" />
+        app:srcCompat="@drawable/ic_profile"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/iconlogout"
@@ -23,11 +25,13 @@
         android:layout_height="56dp"
         android:layout_marginStart="286dp"
         android:layout_marginBottom="4dp"
+        android:onClick="out"
         app:layout_constraintBottom_toBottomOf="@+id/profic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/profic"
-        app:srcCompat="@drawable/logout" />
+        app:srcCompat="@drawable/logout"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/username"
@@ -66,7 +70,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/jadwal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/jadwal" />
 
@@ -218,6 +222,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="284dp"
         android:backgroundTint="#00FFFFFF"
+        android:onClick="add"
         app:layout_constraintBottom_toBottomOf="@+id/detailprof"
         app:layout_constraintEnd_toEndOf="@+id/detailprof"
         app:layout_constraintStart_toStartOf="@+id/tanggallog"
@@ -233,12 +238,37 @@
         android:backgroundTint="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/tanggallog"
         app:layout_constraintEnd_toEndOf="@+id/detailprof"
+        android:onClick="detail"
         app:layout_constraintHorizontal_bias="0.892"
         app:layout_constraintStart_toEndOf="@+id/tanggallog"
         app:layout_constraintTop_toTopOf="@+id/tanggallog"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/detail"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/button_semhas"
+        android:layout_width="83dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:onClick="semhas"
+        app:layout_constraintEnd_toEndOf="@+id/isijadwal"
+        app:layout_constraintTop_toTopOf="@+id/isijadwal"
+        app:srcCompat="@drawable/ic_button_semhas"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/button_sidang"
+        android:layout_width="83dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="110dp"
+        android:onClick="sidang"
+        app:layout_constraintEnd_toEndOf="@+id/button_semhas"
+        app:layout_constraintStart_toStartOf="@+id/button_semhas"
+        app:layout_constraintTop_toBottomOf="@+id/button_semhas"
+        app:srcCompat="@drawable/ic_button_sidang"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

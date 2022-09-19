@@ -9,12 +9,12 @@
 
     <TextView
         android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="53dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Login"
         android:textColor="@color/white"
-        android:textSize="60sp"
+        android:textSize="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,6 +93,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="login"
+        android:onClick="login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"

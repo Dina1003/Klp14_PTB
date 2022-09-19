@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-
+        android:onClick="home"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Head"
         app:srcCompat="@drawable/ic_back"
@@ -84,15 +84,6 @@
         app:srcCompat="@drawable/ic_bukalist"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:text="Cek sidang"
-        android:onClick="sidang"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

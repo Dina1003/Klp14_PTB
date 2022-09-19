@@ -24,8 +24,8 @@ public class Sidang_Awal extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void semhaskembali(View view) {
-        Intent intent = new Intent(Sidang_Awal.this, Semhas_Awal.class);
+    public void home(View view) {
+        Intent intent = new Intent(Sidang_Awal.this, HomeScreenActivity.class);
         startActivity(intent);
     }
 }

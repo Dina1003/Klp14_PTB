@@ -22,6 +22,47 @@
         <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/layout/activity_profile.xml" value="0.25" />
         <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/layout/activity_ubah_email.xml" value="0.22" />
         <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/layout/activity_ubah_no_tlp.xml" value="0.16666666666666666" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/barprofil.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/btn_bg.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/button_kostum.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_back.xml" value="0.1" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_background_atas.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_bukadetail.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_bukalist.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_button_pengajuan.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_cek.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_edit.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_kosong.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_lakasi.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_list_kosong.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_ok.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_popup.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_profile.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_pukul.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_tanggal.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_teks_peserta.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_teks_sidangakhir.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_tekssemhas.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/input_bg.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/jadwal.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/text_kostum.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/transparan_costum.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/warnaprofil.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_detail_sem_has.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_edit_profile.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_home_screen.xml" value="0.16666666666666666" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_logbook_add.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_logbook_detail.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_logbook_edit.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_login.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_pengajuan_sidang.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_profile.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_semhas_awal.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_sidang_awal.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_ubah_email.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_ubah_no_tlp.xml" value="0.14130434782608695" />
         <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc3/app/src/main/res/drawable/button_kostum.xml" value="0.1225" />
         <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc3/app/src/main/res/drawable/ic_button_pengajuan.xml" value="0.1225" />
         <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc3/app/src/main/res/drawable/ic_popup.xml" value="0.1225" />

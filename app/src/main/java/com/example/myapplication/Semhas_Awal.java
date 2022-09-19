@@ -35,4 +35,8 @@ public class Semhas_Awal extends AppCompatActivity {
     }
 
 
+    public void home(View view) {
+        Intent intent = new Intent(Semhas_Awal.this, HomeScreenActivity.class);
+        startActivity(intent);
+    }
 }
