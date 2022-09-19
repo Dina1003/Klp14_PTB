@@ -106,16 +106,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/judulprofil" />
 
-    <Button
-        android:id="@+id/updatepassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:text="Ganti Password"
-        app:layout_constraintStart_toStartOf="@+id/warnaprofile"
-        app:layout_constraintTop_toBottomOf="@+id/warnaprofile" />
-
     <TextView
         android:id="@+id/nim2"
         android:layout_width="197dp"
@@ -204,6 +194,21 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_edit"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/gantipass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="ganti pass"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/warnaprofile"
+        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/warnaprofile"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/gantipass" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
