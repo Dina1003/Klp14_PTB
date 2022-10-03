@@ -126,38 +126,16 @@
         app:layout_constraintStart_toStartOf="@+id/judulta"
         app:layout_constraintTop_toBottomOf="@+id/judulta" />
 
-    <RadioButton
-        android:id="@+id/sudah"
-        android:layout_width="83dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:text="Sudah"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mulai"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <RadioButton
-        android:id="@+id/belum"
-        android:layout_width="85dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:text="Belum"
-        app:layout_constraintStart_toEndOf="@+id/sudah"
-        app:layout_constraintTop_toBottomOf="@+id/mulai" />
-
     <ImageButton
         android:id="@+id/daftar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="daftar"
+        android:onClick="daftar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.644"
-        app:layout_constraintStart_toEndOf="@+id/belum"
         app:layout_constraintTop_toBottomOf="@+id/mulai"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/dftar" />
