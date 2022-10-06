@@ -1,6 +1,5 @@
 package com.example.myapplication.adapter;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
 import com.example.myapplication.models.Logbook;
-import com.example.myapplication.models.jadwal;
 
 import java.util.ArrayList;
 
@@ -38,12 +36,14 @@ public class LogbookAdapter extends RecyclerView.Adapter<LogbookAdapter.LogbookV
     @Override
     public void onBindViewHolder(@NonNull LogbookViewHolder holder, int position) {
         Logbook Logbook = listLogbook.get(position);
+        holder.texttanggalselesai.setText(Logbook.getTanggal());
         holder.textketerangan.setText(Integer.toString(Logbook.getKeterangan()));
         if(Logbook.getKeterangan() ==1 ){
             holder.textketerangan.setText("Selesai");
         }else{
             holder.textketerangan.setText("Belum Selesai");
         }
+
 
     }
 
@@ -53,7 +53,9 @@ public class LogbookAdapter extends RecyclerView.Adapter<LogbookAdapter.LogbookV
         return listLogbook.size();
     }
 
-    public class LogbookViewHolder extends RecyclerView.ViewHolder {
+
+
+    public class LogbookViewHolder extends RecyclerView.ViewHolder{
 
         public TextView textketerangan, texttanggalselesai;
         public LogbookViewHolder(@NonNull View itemView) {
@@ -61,5 +63,6 @@ public class LogbookAdapter extends RecyclerView.Adapter<LogbookAdapter.LogbookV
             textketerangan=itemView.findViewById(R.id.keterangan);
             texttanggalselesai = itemView.findViewById(R.id.tanggalselesai);
         }
+
     }
 }

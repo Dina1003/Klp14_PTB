@@ -8,11 +8,15 @@ import android.view.View;
 
 public class DetailSidang extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_sidang);
+
     }
+
 
     public void back(View view) {
         Intent intent = new Intent(DetailSidang.this, Sidang_Awal.class);

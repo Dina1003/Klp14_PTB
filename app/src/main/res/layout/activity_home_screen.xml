@@ -67,21 +67,22 @@
         android:id="@+id/loogbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="21dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Logbook"
+        android:onClick="Logbook"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintHorizontal_bias="0.03"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rvsemsid" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvsemsid"
-        android:layout_width="wrap_content"
-        android:layout_height="318dp"
+        android:layout_width="408dp"
+        android:layout_height="445dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="6dp"
@@ -90,33 +91,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/jadwal"
         tools:listitem="@layout/home" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvlogbook"
-        android:layout_width="409dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loogbook"
-        tools:listitem="@layout/logbook" />
-
-    <ImageButton
-        android:id="@+id/tambah"
-        android:layout_width="58dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="236dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/rvlogbook"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.304"
-        app:layout_constraintStart_toEndOf="@+id/loogbook"
-        app:layout_constraintTop_toBottomOf="@+id/rvsemsid"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/tambah"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

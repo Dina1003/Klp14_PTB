@@ -1,21 +1,19 @@
 package com.example.myapplication;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.LinearLayout;
-
 import com.example.myapplication.adapter.jadwalAdapter;
-import com.example.myapplication.models.Logbook;
 import com.example.myapplication.models.jadwal;
 
 import java.util.ArrayList;
 
-public class HomeScreenActivity extends AppCompatActivity {
+public class HomeScreenActivity extends AppCompatActivity implements jadwalAdapter.ItemJadwalClickListener{
 
     private RecyclerView rvsidsem;
 
@@ -24,13 +22,17 @@ public class HomeScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
+
         rvsidsem =findViewById(R.id.rvsemsid);
 
         jadwalAdapter adapter = new jadwalAdapter(getjadwal());
+        adapter.setListener(this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+
 
         rvsidsem.setLayoutManager(layoutManager);
         rvsidsem.setAdapter(adapter);
+
 
     }
 
@@ -53,17 +55,8 @@ public class HomeScreenActivity extends AppCompatActivity {
                 "Rabu, 01 Agustus 2023"
 
         ));
-        listjadwal.add(new jadwal(
-                "Aulia Dwi Shaviqa Pohan",
-                0,
-                "09.00 WIB",
-                "Ruang Sidang SI",
-                "Rabu, 01 Agustus 2023"
-
-        ));
         return listjadwal;
     }
-
 
 
 
@@ -77,4 +70,15 @@ public class HomeScreenActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void Logbook(View view) {
+        Intent intent = new Intent(HomeScreenActivity.this, HalamanLogbookActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void OnItemJadwalClick(jadwal jadwal) {
+        Intent detailIntent =new Intent(this, DetailSidang.class );
+        detailIntent.putExtra("tipe jadwal",jadwal.getTipejadwal());
+        startActivity(detailIntent);
+    }
 }
