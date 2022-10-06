@@ -19,11 +19,11 @@ public class LogbookAdapter extends RecyclerView.Adapter<LogbookAdapter.LogbookV
     public LogbookAdapter(ArrayList<Logbook> listlogbook) {
         this.listLogbook = listLogbook;
     }
-
-
     public void setListLogbook(ArrayList<Logbook> listLogbook) {
         this.listLogbook = listLogbook;
+        notifyDataSetChanged();
     }
+
 
     @NonNull
     @Override
@@ -35,27 +35,24 @@ public class LogbookAdapter extends RecyclerView.Adapter<LogbookAdapter.LogbookV
 
     @Override
     public void onBindViewHolder(@NonNull LogbookViewHolder holder, int position) {
+
         Logbook Logbook = listLogbook.get(position);
         holder.texttanggalselesai.setText(Logbook.getTanggal());
         holder.textketerangan.setText(Integer.toString(Logbook.getKeterangan()));
-        if(Logbook.getKeterangan() ==1 ){
+        if (Logbook.getKeterangan()==1){
             holder.textketerangan.setText("Selesai");
-        }else{
+        }else {
             holder.textketerangan.setText("Belum Selesai");
         }
-
 
     }
 
     @Override
     public int getItemCount() {
-
         return listLogbook.size();
     }
 
-
-
-    public class LogbookViewHolder extends RecyclerView.ViewHolder{
+    public class LogbookViewHolder extends RecyclerView.ViewHolder {
 
         public TextView textketerangan, texttanggalselesai;
         public LogbookViewHolder(@NonNull View itemView) {
@@ -63,6 +60,5 @@ public class LogbookAdapter extends RecyclerView.Adapter<LogbookAdapter.LogbookV
             textketerangan=itemView.findViewById(R.id.keterangan);
             texttanggalselesai = itemView.findViewById(R.id.tanggalselesai);
         }
-
     }
 }
