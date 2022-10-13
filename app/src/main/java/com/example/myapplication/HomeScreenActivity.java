@@ -1,18 +1,64 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class HomeScreenActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.myapplication.adapter.jadwalAdapter;
+import com.example.myapplication.models.jadwal;
+
+import java.util.ArrayList;
+
+public class HomeScreenActivity extends AppCompatActivity implements jadwalAdapter.ItemJadwalClickListener{
+
+    private RecyclerView rvsidsem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+
+
+        rvsidsem =findViewById(R.id.rvsemsid);
+
+        jadwalAdapter adapter = new jadwalAdapter(getjadwal());
+        adapter.setListener(this);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+
+
+        rvsidsem.setLayoutManager(layoutManager);
+        rvsidsem.setAdapter(adapter);
+
+
     }
+
+    public ArrayList<jadwal>getjadwal(){
+
+        ArrayList<jadwal>listjadwal = new ArrayList<>();
+        listjadwal.add(new jadwal(
+                "Aulia Dwi Shaviqa Pohan",
+                0,
+                "11.00 WIB",
+                "Ruang Sidang SI",
+                "Senin, 23 Agustus 2023"
+
+        ));
+        listjadwal.add(new jadwal(
+                "Aulia Dwi Shaviqa Pohan",
+                1,
+                "09.00 WIB",
+                "Ruang Sidang SI",
+                "Rabu, 01 Agustus 2023"
+
+        ));
+        return listjadwal;
+    }
+
+
 
     public void profil(View view) {
         Intent intent = new Intent(HomeScreenActivity.this, ProfileActivity.class);
@@ -24,23 +70,15 @@ public class HomeScreenActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void semhas(View view) {
-        Intent intent = new Intent(HomeScreenActivity.this, Semhas_Awal.class);
+    public void Logbook(View view) {
+        Intent intent = new Intent(HomeScreenActivity.this, HalamanLogbookActivity.class);
         startActivity(intent);
     }
 
-    public void sidang(View view) {
-        Intent intent = new Intent(HomeScreenActivity.this, Sidang_Awal.class);
-        startActivity(intent);
-    }
-
-    public void detail(View view) {
-        Intent intent = new Intent(HomeScreenActivity.this, Logbook_Detail.class);
-        startActivity(intent);
-    }
-
-    public void add(View view) {
-        Intent intent = new Intent(HomeScreenActivity.this, Logbook_Add.class);
-        startActivity(intent);
+    @Override
+    public void OnItemJadwalClick(jadwal jadwal) {
+        Intent detailIntent =new Intent(this, DetailSidang.class );
+        detailIntent.putExtra("tipe jadwal",jadwal.getTipejadwal());
+        startActivity(detailIntent);
     }
 }

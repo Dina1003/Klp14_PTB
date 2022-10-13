@@ -63,212 +63,32 @@
         app:layout_constraintStart_toStartOf="@+id/profic"
         app:layout_constraintTop_toBottomOf="@+id/profic" />
 
-    <View
-        android:id="@+id/isijadwal"
-        android:layout_width="390dp"
-        android:layout_height="288dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/jadwal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jadwal" />
-
-    <TextView
-        android:id="@+id/namasidang"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
-        android:text="Aulia Dwi Shaviqa Pohan"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/isijadwal"
-        app:layout_constraintHorizontal_bias="0.096"
-        app:layout_constraintStart_toStartOf="@+id/isijadwal"
-        app:layout_constraintTop_toTopOf="@+id/isijadwal" />
-
-    <ImageView
-        android:id="@+id/tanggal2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="@+id/namasidang"
-        app:layout_constraintTop_toBottomOf="@+id/namasidang"
-        app:srcCompat="@drawable/ic_tanggal" />
-
-    <ImageView
-        android:id="@+id/lokasi2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="@+id/jam2"
-        app:layout_constraintTop_toBottomOf="@+id/jam2"
-        app:srcCompat="@drawable/ic_lakasi" />
-
-    <ImageView
-        android:id="@+id/jam2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/tanggal2"
-        app:layout_constraintTop_toBottomOf="@+id/tanggal2"
-        app:srcCompat="@drawable/ic_pukul" />
-
-    <TextView
-        android:id="@+id/namasemhas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Aulia Dwi Shaviqa Pohan"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/isijadwal"
-        app:layout_constraintHorizontal_bias="0.096"
-        app:layout_constraintStart_toStartOf="@+id/isijadwal"
-        app:layout_constraintTop_toTopOf="@+id/isijadwal" />
-
-    <ImageView
-        android:id="@+id/tanggal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/namasemhas"
-        app:layout_constraintTop_toBottomOf="@+id/namasemhas"
-        app:srcCompat="@drawable/ic_tanggal" />
-
-    <ImageView
-        android:id="@+id/jam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/tanggal"
-        app:layout_constraintTop_toBottomOf="@+id/tanggal"
-        app:srcCompat="@drawable/ic_pukul" />
-
-    <ImageView
-        android:id="@+id/lokasi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/jam"
-        app:layout_constraintTop_toBottomOf="@+id/jam"
-        app:srcCompat="@drawable/ic_lakasi" />
-
-    <View
-        android:id="@+id/detailprof"
-        android:layout_width="382dp"
-        android:layout_height="167dp"
-        android:layout_marginBottom="68dp"
-        android:background="@drawable/jadwal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.275"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/loogbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Logbook"
+        android:onClick="Logbook"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/detailprof"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintHorizontal_bias="0.03"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/isijadwal"
-        app:layout_constraintVertical_bias="0.547" />
+        app:layout_constraintTop_toBottomOf="@+id/rvsemsid" />
 
-    <ImageView
-        android:id="@+id/selesai"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintStart_toStartOf="@+id/detailprof"
-        app:layout_constraintTop_toTopOf="@+id/detailprof"
-        app:srcCompat="@drawable/selesai" />
-
-    <ImageView
-        android:id="@+id/line"
-        android:layout_width="332dp"
-        android:layout_height="9dp"
-        android:layout_marginTop="44dp"
-        app:layout_constraintStart_toStartOf="@+id/tanggallog"
-        app:layout_constraintTop_toBottomOf="@+id/selesai"
-        app:srcCompat="@drawable/line" />
-
-    <TextView
-        android:id="@+id/tanggallog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="20 Mei 2023"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/detailprof"
-        app:layout_constraintHorizontal_bias="0.01"
-        app:layout_constraintStart_toStartOf="@+id/selesai"
-        app:layout_constraintTop_toBottomOf="@+id/selesai" />
-
-    <ImageButton
-        android:id="@+id/tambah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="284dp"
-        android:backgroundTint="#00FFFFFF"
-        android:onClick="add"
-        app:layout_constraintBottom_toBottomOf="@+id/detailprof"
-        app:layout_constraintEnd_toEndOf="@+id/detailprof"
-        app:layout_constraintStart_toStartOf="@+id/tanggallog"
-        app:layout_constraintTop_toBottomOf="@+id/detaillog"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/tambah"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <ImageButton
-        android:id="@+id/detaillog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/tanggallog"
-        app:layout_constraintEnd_toEndOf="@+id/detailprof"
-        android:onClick="detail"
-        app:layout_constraintHorizontal_bias="0.892"
-        app:layout_constraintStart_toEndOf="@+id/tanggallog"
-        app:layout_constraintTop_toTopOf="@+id/tanggallog"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/detail"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
-
-    <ImageView
-        android:id="@+id/button_semhas"
-        android:layout_width="83dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
-        android:onClick="semhas"
-        app:layout_constraintEnd_toEndOf="@+id/isijadwal"
-        app:layout_constraintTop_toTopOf="@+id/isijadwal"
-        app:srcCompat="@drawable/ic_button_semhas"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-    <ImageView
-        android:id="@+id/button_sidang"
-        android:layout_width="83dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="110dp"
-        android:onClick="sidang"
-        app:layout_constraintEnd_toEndOf="@+id/button_semhas"
-        app:layout_constraintStart_toStartOf="@+id/button_semhas"
-        app:layout_constraintTop_toBottomOf="@+id/button_semhas"
-        app:srcCompat="@drawable/ic_button_sidang"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvsemsid"
+        android:layout_width="408dp"
+        android:layout_height="445dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jadwal"
+        tools:listitem="@layout/home" />
 </androidx.constraintlayout.widget.ConstraintLayout>

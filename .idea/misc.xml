@@ -89,9 +89,32 @@
         <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc5/app/src/main/res/layout/activity_pop_up_sidang.xml" value="0.14130434782608695" />
         <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc5/app/src/main/res/layout/activity_semhas_awal.xml" value="0.1408514492753623" />
         <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc5/app/src/main/res/layout/activity_sidang_awal.xml" value="0.14130434782608695" />
+
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_detail_sem_has.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_detail_sidang.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_form_pendaftaran_tactivity.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_form_pengajuan.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_halaman_logbook.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_home.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_home_screen.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_input_peserta.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_logbook_add.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_logbook_detail.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_logbook_edit.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_pop_up.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_profile.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_semhas_awal.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_sidang_awal.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/home.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/homelayout.xml" value="0.17447916666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/layouthome.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/logbook.xml" value="0.3333333333333333" />
+
         <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc9/app/src/main/res/layout/activity_form_pendaftaran_tactivity.xml" value="0.14666666666666667" />
         <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc9/app/src/main/res/layout/activity_home_kosong.xml" value="0.14130434782608695" />
         <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc9/app/src/main/res/layout/activity_home_screen.xml" value="0.14130434782608695" />
+
       </map>
     </option>
   </component>
