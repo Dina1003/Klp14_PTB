@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF"
+    tools:context=".Pengajuan_Sidang">
+
+    <Button
+        android:id="@+id/pengajuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_kostum"
+        android:text="Ajukan"
+        android:onClick="ajukan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/Head"
+        android:layout_width="406dp"
+        android:layout_height="95dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_background_atas" />
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="53dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Head"
+        app:srcCompat="@drawable/logo_unand" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:onClick="pindah"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Head"
+        app:srcCompat="@drawable/ic_back"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/nama"
+        android:layout_width="332dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="  Name"
+        android:textColor="@color/black"
+        android:background="@drawable/text_kostum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Head" />
+
+    <EditText
+        android:id="@+id/nim"
+        android:layout_width="332dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="  Nim"
+        android:textColor="@color/black"
+        android:background="@drawable/text_kostum"
+        app:layout_constraintEnd_toEndOf="@+id/nama"
+        app:layout_constraintStart_toStartOf="@+id/nama"
+        app:layout_constraintTop_toBottomOf="@+id/nama" />
+
+    <EditText
+        android:id="@+id/angkatan"
+        android:layout_width="332dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="  Angkatan"
+        android:textColor="@color/black"
+        android:background="@drawable/text_kostum"
+        app:layout_constraintEnd_toEndOf="@+id/nim"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nim"
+        app:layout_constraintTop_toBottomOf="@+id/nim" />
+
+    <EditText
+        android:id="@+id/jurusan"
+        android:layout_width="332dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="  Jurusan"
+        android:textColor="@color/black"
+        android:background="@drawable/text_kostum"
+        app:layout_constraintEnd_toEndOf="@+id/angkatan"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/angkatan"
+        app:layout_constraintTop_toBottomOf="@+id/angkatan" />
+
+    <EditText
+        android:id="@+id/judul_TA"
+        android:layout_width="332dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="  Judul TA"
+        android:textColor="@color/black"
+        android:background="@drawable/text_kostum"
+        app:layout_constraintEnd_toEndOf="@+id/jurusan"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/jurusan"
+        app:layout_constraintTop_toBottomOf="@+id/jurusan" />
+
+    <Button
+        android:id="@+id/laporan_ta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Laporan TA+"
+        app:layout_constraintStart_toStartOf="@+id/judul_TA"
+        app:layout_constraintTop_toBottomOf="@+id/judul_TA" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

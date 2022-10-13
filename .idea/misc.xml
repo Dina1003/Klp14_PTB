@@ -1,5 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1045" />
+        <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/drawable/barprofil.xml" value="0.102" />
+        <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/drawable/btn_bg.xml" value="0.1045" />
+        <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/drawable/ic_person.xml" value="0.1045" />
+        <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/drawable/ic_profile.xml" value="0.102" />
+        <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/drawable/ic_pukul.xml" value="0.102" />
+        <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/drawable/ic_tanggal.xml" value="0.102" />
+        <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/drawable/input_bg.xml" value="0.1045" />
+        <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/drawable/inputbgrn.xml" value="0.1045" />
+        <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/drawable/jadwal.xml" value="0.102" />
+        <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/drawable/warnaprofil.xml" value="0.102" />
+        <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/layout/activity_edit_profile.xml" value="0.22" />
+        <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/layout/activity_form_pendaftaran_tactivity.xml" value="0.22" />
+        <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/layout/activity_home_screen.xml" value="0.22" />
+        <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/layout/activity_main.xml" value="0.14130434782608695" />
+        <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/layout/activity_ubah_email.xml" value="0.22" />
+        <entry key="..\:/1DATABASE KULIAH/SEMESTER 5/PTB/PTB A Bismillah/app/src/main/res/layout/activity_ubah_no_tlp.xml" value="0.16666666666666666" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/barprofil.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/btn_bg.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/button_kostum.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_back.xml" value="0.1" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_background_atas.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_bukadetail.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_bukalist.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_button_pengajuan.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_cek.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_edit.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_kosong.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_lakasi.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_list_kosong.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_ok.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_popup.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_profile.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_pukul.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_tanggal.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_teks_peserta.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_teks_sidangakhir.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/ic_tekssemhas.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/input_bg.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/jadwal.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/text_kostum.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/transparan_costum.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/drawable/warnaprofil.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_detail_sem_has.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_edit_profile.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_home_screen.xml" value="0.16666666666666666" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_logbook_add.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_logbook_detail.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_logbook_edit.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_login.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_pengajuan_sidang.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_profile.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_semhas_awal.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_sidang_awal.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_ubah_email.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTB/app/src/main/res/layout/activity_ubah_no_tlp.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc11/app/src/main/res/layout/activity_semhas_awal.xml" value="0.22" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc11/app/src/main/res/layout/item_kelas.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc3/app/src/main/res/drawable/button_kostum.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc3/app/src/main/res/drawable/ic_button_pengajuan.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc3/app/src/main/res/drawable/ic_popup.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc3/app/src/main/res/drawable/text_kostum.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc3/app/src/main/res/drawable/transparan_costum.xml" value="0.1225" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc3/app/src/main/res/layout/activity_detail_peserta.xml" value="0.22" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc3/app/src/main/res/layout/activity_detail_sem_has.xml" value="0.22" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc3/app/src/main/res/layout/activity_form_pengajuan.xml" value="0.1408514492753623" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc3/app/src/main/res/layout/activity_input_peserta.xml" value="0.1408514492753623" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc3/app/src/main/res/layout/activity_main.xml" value="0.1408514492753623" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc3/app/src/main/res/layout/activity_peserta.xml" value="0.16666666666666666" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc3/app/src/main/res/layout/activity_pop_up.xml" value="0.16666666666666666" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc5/app/src/main/res/layout/activity_detail_peserta.xml" value="0.1408514492753623" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc5/app/src/main/res/layout/activity_detail_sem_has.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc5/app/src/main/res/layout/activity_detail_sidang.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc5/app/src/main/res/layout/activity_form_pengajuan.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc5/app/src/main/res/layout/activity_input_peserta.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc5/app/src/main/res/layout/activity_main.xml" value="0.1408514492753623" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc5/app/src/main/res/layout/activity_pengajuan_sidang.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc5/app/src/main/res/layout/activity_peserta.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc5/app/src/main/res/layout/activity_pop_up.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc5/app/src/main/res/layout/activity_pop_up_sidang.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc5/app/src/main/res/layout/activity_semhas_awal.xml" value="0.1408514492753623" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc5/app/src/main/res/layout/activity_sidang_awal.xml" value="0.14130434782608695" />
+
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_detail_sem_has.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_detail_sidang.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_form_pendaftaran_tactivity.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_form_pengajuan.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_halaman_logbook.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_home.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_home_screen.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_input_peserta.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_logbook_add.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_logbook_detail.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_logbook_edit.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_pop_up.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_profile.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_semhas_awal.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/activity_sidang_awal.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/home.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/homelayout.xml" value="0.17447916666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/layouthome.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PTB14/app/src/main/res/layout/logbook.xml" value="0.3333333333333333" />
+
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc9/app/src/main/res/layout/activity_form_pendaftaran_tactivity.xml" value="0.14666666666666667" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc9/app/src/main/res/layout/activity_home_kosong.xml" value="0.14130434782608695" />
+        <entry key="..\:/@Semester 5/Android Studio/Klp14_PTBc9/app/src/main/res/layout/activity_home_screen.xml" value="0.14130434782608695" />
+
+      </map>
+    </option>
+  </component>
+
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
