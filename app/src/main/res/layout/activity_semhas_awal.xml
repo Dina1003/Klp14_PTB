@@ -61,29 +61,17 @@
         app:layout_constraintTop_toBottomOf="@+id/Head"
         app:srcCompat="@drawable/ic_tekssemhas" />
 
-    <TextView
-        android:id="@+id/text_jadwal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
-        android:text="Jum'at/ 21-10-2022"
-        android:textColor="@color/black"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAgenda"
+        android:layout_width="358dp"
+        android:layout_height="454dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/Button_Pengajuan"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SemHas_Text" />
-
-    <ImageView
-        android:id="@+id/button_bukaList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="40dp"
-        android:onClick="pindah"
-        app:layout_constraintStart_toEndOf="@+id/text_jadwal"
         app:layout_constraintTop_toBottomOf="@+id/SemHas_Text"
-        app:srcCompat="@drawable/ic_bukalist"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
+        tools:listitem="@layout/item_kelas" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
