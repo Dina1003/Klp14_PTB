@@ -4,7 +4,7 @@ public class Logbook {
     String tanggal;
     int keterangan;
 
-    public Logbook(){}
+    public Logbook() {}
 
     public Logbook(String tanggal, int keterangan) {
         this.tanggal = tanggal;
