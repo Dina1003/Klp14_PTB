@@ -1,3 +1,10 @@
 <resources>
 
+    <string name="app_name">My Application</string>
+    <string name="judul_kegiatan">Judul Kegiatan</string>
+    <string name="_13_oktober_2022">13 Oktober 2022</string>
+    <string name="book">book</string>
+    <string name="detail">detail</string>
+    <string name="list_logbook">List LogBook</string>
+
 </resources>
