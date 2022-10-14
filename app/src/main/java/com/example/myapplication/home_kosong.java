@@ -15,12 +15,17 @@ public class home_kosong extends AppCompatActivity {
     }
 
     public void out(View view) {
-        Intent intent = new Intent(home_kosong.this, ProfileActivity.class);
+        Intent intent = new Intent(home_kosong.this, LoginActivity.class);
         startActivity(intent);
     }
 
     public void daftar(View view) {
         Intent intent = new Intent(home_kosong.this, FormPendaftaranTActivity.class);
+        startActivity(intent);
+    }
+
+    public void profil(View view) {
+        Intent intent = new Intent(home_kosong.this, ProfileActivity.class);
         startActivity(intent);
     }
 }

@@ -20,7 +20,7 @@ public class Pengajuan_Sidang extends AppCompatActivity {
     }
 
     public void ajukan(View view) {
-        Intent intent = new Intent(Pengajuan_Sidang.this, PopUp_Sidang.class);
+        Intent intent = new Intent(Pengajuan_Sidang.this, Sidang_Awal.class);
         startActivity(intent);
     }
 }

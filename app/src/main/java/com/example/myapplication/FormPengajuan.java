@@ -20,7 +20,7 @@ public class FormPengajuan extends AppCompatActivity {
     }
 
     public void ajukan(View view) {
-        Intent intent = new Intent(FormPengajuan.this, PopUp.class);
+        Intent intent = new Intent(FormPengajuan.this, Semhas_Awal.class);
         startActivity(intent);
     }
 }
