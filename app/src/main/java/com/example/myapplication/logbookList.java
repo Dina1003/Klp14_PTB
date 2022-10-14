@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.myapplication.adapter.logbookAdapter;
@@ -84,6 +85,9 @@ public class logbookList extends AppCompatActivity implements logbookAdapter.ite
 
     @Override
     public void onItemLogbookClick(logbook logbook) {
+        Intent detailIntent = new Intent(this, Logbook_Detail.class);
+//        detailIntent.putExtra("tanggal", agenda1.getTanggal());
+        startActivity(detailIntent);
 
     }
 }

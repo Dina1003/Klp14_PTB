@@ -90,6 +90,16 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
         startActivity(intent);
     }
 
+    public void logbook(View view) {
+        Intent intent = new Intent(HomeScreenActivity.this, logbookList.class);
+        startActivity(intent);
+    }
+
+    public void image_detaillog(View view) {
+        Intent intent = new Intent(HomeScreenActivity.this, logbookList.class);
+        startActivity(intent);
+    }
+
 
 
     @Override
