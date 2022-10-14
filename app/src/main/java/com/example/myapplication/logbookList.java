@@ -32,52 +32,52 @@ public class logbookList extends AppCompatActivity implements logbookAdapter.ite
     public ArrayList<logbook> getlogbook(){
         ArrayList<logbook> listLogbook = new ArrayList<>();
         listLogbook.add(new logbook(
-                null,
+
                 "12 Oktober 2022",
-                "Bimbingan 1",
-                1
+                "Bimbingan 1"
+
         ));
         listLogbook.add(new logbook(
-                null,
+
                 "13 Oktober 2022",
-                "Bimbingan 2",
-                1
+                "Bimbingan 2"
+
         ));
         listLogbook.add(new logbook(
-                null,
+
                 "14 Oktober 2022",
-                "Bimbingan 3",
-                1
+                "Bimbingan 3"
+
         ));
         listLogbook.add(new logbook(
-                null,
+
                 "15 Oktober 2022",
-                "Bimbingan 4",
-                1
+                "Bimbingan 4"
+
         ));
         listLogbook.add(new logbook(
-                null,
+
                 "16 Oktober 2022",
-                "Bimbingan terakhir",
-                1
+                "Bimbingan terakhir"
+
         ));
         listLogbook.add(new logbook(
-                null,
+
                 "17 Oktober 2022",
-                "Bimbingan terakhir tp boong",
-                1
+                "Bimbingan terakhir tp boong"
+
         ));
         listLogbook.add(new logbook(
-                null,
+
                 "18 Oktober 2022",
-                "Bimbingan terakhir gakdeng",
-                1
+                "Bimbingan terakhir gakdeng"
+
         ));
         listLogbook.add(new logbook(
-                null,
+
                 "19 Oktober 2022",
-                "Bimbingan terakhir beneran",
-                1
+                "Bimbingan terakhir beneran"
+
         ));
         return listLogbook;
     }

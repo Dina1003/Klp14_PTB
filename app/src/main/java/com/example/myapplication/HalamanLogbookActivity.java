@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.adapter.LogbookAdapter;
-import com.example.myapplication.models.Logbook;
+import com.example.myapplication.adapter.logbookAdapter;
+import com.example.myapplication.models.logbook;
 
 import java.util.ArrayList;
 
@@ -24,7 +24,7 @@ public class HalamanLogbookActivity extends AppCompatActivity{
         setContentView(R.layout.activity_halaman_logbook);
 
         rvlogbook =findViewById(R.id.rvlogbook);
-        LogbookAdapter adapter = new LogbookAdapter(getLogbook());
+        logbookAdapter adapter = new logbookAdapter(getLogbook());
         LinearLayoutManager layoutManager = new LinearLayoutManager((this));
 
         rvlogbook.setLayoutManager(layoutManager);
@@ -32,16 +32,26 @@ public class HalamanLogbookActivity extends AppCompatActivity{
 
     }
 
-    public ArrayList<Logbook>getLogbook(){
+    public ArrayList<logbook>getLogbook(){
 
-        ArrayList<Logbook>listLogbook = new ArrayList<>();
-        listLogbook.add(new Logbook(
+        ArrayList<logbook>listLogbook = new ArrayList<>();
+        listLogbook.add(new logbook(
                 "selasa, 15 maret 2023",
-                1
+                "Bimbingan Bab 2"
         ));
-        listLogbook.add(new Logbook(
+        listLogbook.add(new logbook(
                 "kamis, 12 April 2023",
-                1
+                "Bimbingan Revisi BAB 2 dan BAB 3"
+
+        ));
+        listLogbook.add(new logbook(
+                "kamis, 12 April 2023",
+                "Bimbingan Revisi BAB 2 dan BAB 3"
+
+        ));
+        listLogbook.add(new logbook(
+                "kamis, 12 April 2023",
+                "Bimbingan Revisi BAB 2 dan BAB 3"
 
         ));
         return listLogbook;
