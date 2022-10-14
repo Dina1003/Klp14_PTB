@@ -12,20 +12,20 @@ public class logbook {
 
     }
 
-    public logbook(String gambar, String tanggal, String judulAgenda, int status) {
-        this.gambar = gambar;
+    public logbook(String tanggal, String judulAgenda) {
+//        this.gambar = gambar;
         this.tanggal = tanggal;
         this.judulAgenda = judulAgenda;
-        this.status = status;
+//        this.status = status;
     }
 
-    public String getGambar() {
-        return gambar;
-    }
-
-    public void setGambar(String gambar) {
-        this.gambar = gambar;
-    }
+//    public String getGambar() {
+//        return gambar;
+//    }
+//
+//    public void setGambar(String gambar) {
+//        this.gambar = gambar;
+//    }
 
     public String getTanggal() {
         return tanggal;
@@ -43,12 +43,12 @@ public class logbook {
         this.judulAgenda = judulAgenda;
     }
 
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
-    }
+//    public int getStatus() {
+//        return status;
+//    }
+//
+//    public void setStatus(int status) {
+//        this.status = status;
+//    }
 }
 
