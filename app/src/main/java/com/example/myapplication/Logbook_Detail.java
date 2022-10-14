@@ -8,10 +8,17 @@ import android.view.View;
 
 public class Logbook_Detail extends AppCompatActivity {
 
+    String tanggal;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logbook_detail);
+
+//        Intent detailIntent = getIntent();
+//        if(detailIntent != null){
+//            tanggal = detailIntent.getStringExtra("tanggal");
+//        }
     }
 
     public void pindah(View view) {
