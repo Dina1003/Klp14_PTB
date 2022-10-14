@@ -156,35 +156,35 @@
         app:srcCompat="@drawable/ic_lakasi" />
 
     <TextView
-        android:id="@+id/loogbook"
+        android:id="@+id/logbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_medium"
+        android:onClick="logbook"
         android:text="Logbook"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.024"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/isijadwal"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.052"
         tools:ignore="TouchTargetSizeCheck" />
 
     <ImageButton
         android:id="@+id/tambah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
         android:backgroundTint="#00FFFFFF"
         android:onClick="add"
-        app:layout_constraintBottom_toBottomOf="@+id/loogbook"
-        app:layout_constraintStart_toEndOf="@+id/loogbook"
-        app:layout_constraintTop_toTopOf="@+id/loogbook"
-        app:layout_constraintVertical_bias="0.289"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvlogbook"
         app:srcCompat="@drawable/tambah"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -215,15 +215,28 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvlogbook"
-        android:layout_width="368dp"
-        android:layout_height="283dp"
+        android:layout_width="383dp"
+        android:layout_height="169dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loogbook"
+        app:layout_constraintTop_toBottomOf="@+id/logbook"
+        app:layout_constraintVertical_bias="0.086"
         tools:listitem="@layout/item_kelas1" />
+
+    <ImageView
+        android:id="@+id/image_detaillog"
+        android:layout_width="53dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="30dp"
+        android:onClick="image_detaillog"
+        app:layout_constraintBottom_toTopOf="@+id/rvlogbook"
+        app:layout_constraintStart_toEndOf="@+id/logbook"
+        app:layout_constraintTop_toTopOf="@+id/logbook"
+        app:srcCompat="@drawable/ic_bukalist"
+        app:tint="#FAFAFA" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

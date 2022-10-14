@@ -23,6 +23,9 @@
             android:name=".Logbook_Add"
             android:exported="false" />
         <activity
+            android:name=".Logbook_edit"
+            android:exported="false" />
+        <activity
             android:name=".DetailSidang"
             android:exported="false" />
         <activity
@@ -72,6 +75,9 @@
             android:exported="false" />
         <activity
             android:name=".UbahNoTlpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".logbookList"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
