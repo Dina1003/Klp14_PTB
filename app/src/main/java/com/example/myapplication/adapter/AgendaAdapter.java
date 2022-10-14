@@ -17,9 +17,27 @@ public class AgendaAdapter extends RecyclerView.Adapter<AgendaAdapter.AgendaView
     //1.tempat simpan data
     ArrayList<Agenda> listAgenda = new ArrayList<>();
 
+    //(2) identifikasi listener
+    ItemAgendaClickListener listener;
+
     //2. buat construktor sama setter
     public AgendaAdapter(ArrayList<Agenda> listAgenda) {
         this.listAgenda = listAgenda;
+    }
+
+    //(3) buat construktor sama setter listener
+
+    public AgendaAdapter(ItemAgendaClickListener listener) {
+        this.listener = listener;
+    }
+
+    public AgendaAdapter(ArrayList<Agenda> listAgenda, ItemAgendaClickListener listener) {
+        this.listAgenda = listAgenda;
+        this.listener = listener;
+    }
+
+    public void setListener(ItemAgendaClickListener listener) {
+        this.listener = listener;
     }
 
     //4. buat nempatin layout yang mau di tampilin
@@ -48,12 +66,18 @@ public class AgendaAdapter extends RecyclerView.Adapter<AgendaAdapter.AgendaView
 
     }
 
+    //untuk buat rv interaktif
+    //(1)buat kelas interfase
+    public  interface  ItemAgendaClickListener{
+        void onItemAgendaClick(Agenda agenda);
+    }
+
     public void setListAgenda(ArrayList<Agenda> listAgenda) {
         this.listAgenda = listAgenda;
     }
 
     //5. representasi data yang ada di item_kelas
-    public class AgendaViewHolder extends RecyclerView.ViewHolder {
+    public class AgendaViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         //deklarasi item yang ada di layout item_kelas disini dulu
         public TextView textagenda;
 
@@ -61,6 +85,14 @@ public class AgendaAdapter extends RecyclerView.Adapter<AgendaAdapter.AgendaView
             super(itemView);
             textagenda = itemView.findViewById(R.id.agenda);
 
+            itemView.setOnClickListener(this);
+
+        }
+
+        @Override
+        public void onClick(View view) {
+            Agenda agenda = listAgenda.get(getAdapterPosition());
+            listener.onItemAgendaClick(agenda);
         }
     }
 }

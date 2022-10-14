@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.content.Intent;
+import android.widget.Toast;
 
 import com.example.myapplication.adapter.AgendaAdapter;
 import com.example.myapplication.models.Agenda;
@@ -15,7 +16,7 @@ import com.example.myapplication.models.Agenda;
 import java.util.ArrayList;
 
 
-public class Semhas_Awal extends AppCompatActivity {
+public class Semhas_Awal extends AppCompatActivity implements AgendaAdapter.ItemAgendaClickListener {
     //1.deklarasi
     private RecyclerView rvAgenda;
 
@@ -28,6 +29,7 @@ public class Semhas_Awal extends AppCompatActivity {
 
         //3. temukan layout & adapter
         AgendaAdapter adapter = new AgendaAdapter(getAgenda());
+        adapter.setListener(this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
         //4. configurasi layout & adapter
@@ -98,5 +100,14 @@ public class Semhas_Awal extends AppCompatActivity {
     public void home(View view) {
         Intent intent = new Intent(Semhas_Awal.this, HomeScreenActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void onItemAgendaClick(Agenda agenda) {
+        Intent detailIntent = new Intent(this, DetailSemHas.class);
+        detailIntent.putExtra("Jadwal", agenda.getJadwal());
+        startActivity(detailIntent);
+//        Toast.makeText(this, "hahha"+ agenda.getJadwal(), Toast.LENGTH_SHORT).show();
+
     }
 }
