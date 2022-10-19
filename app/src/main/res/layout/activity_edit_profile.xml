@@ -42,7 +42,6 @@
         app:layout_constraintStart_toStartOf="@+id/ubahpass"
         app:layout_constraintTop_toBottomOf="@+id/ubahpass"
         app:srcCompat="@drawable/propict" />
-
     <TextView
         android:id="@+id/textprof"
         android:layout_width="wrap_content"
@@ -57,90 +56,6 @@
         app:layout_constraintStart_toStartOf="@+id/profict"
         app:layout_constraintTop_toBottomOf="@+id/profict" />
 
-    <EditText
-        android:id="@+id/passlama"
-        android:layout_width="324dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:text="Pass lama"
-        app:layout_constraintBottom_toTopOf="@+id/passbarutext"
-        app:layout_constraintEnd_toEndOf="@+id/passlamatext"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/passlamatext"
-        app:layout_constraintTop_toBottomOf="@+id/passlamatext"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/konfpass"
-        android:layout_width="322dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="44dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:text="passbaru"
-        app:layout_constraintEnd_toEndOf="@+id/passbarutext"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/passbarutext"
-        app:layout_constraintTop_toBottomOf="@+id/passbarutext" />
-
-    <EditText
-        android:id="@+id/passbaru"
-        android:layout_width="324dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:text="passbaru"
-        app:layout_constraintEnd_toEndOf="@+id/konftext"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/konftext"
-        app:layout_constraintTop_toBottomOf="@+id/konftext" />
-
-    <TextView
-        android:id="@+id/passlamatext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Masukkan Password Lama"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.186"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textprof" />
-
-    <TextView
-        android:id="@+id/passbarutext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="320dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Masukkan Password Baru"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/passlama"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/passlama" />
-
-    <TextView
-        android:id="@+id/konftext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Konfirmasi Password Baru"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/konfpass"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/konfpass"
-        app:layout_constraintTop_toBottomOf="@+id/konfpass" />
-
     <ImageButton
         android:id="@+id/update"
         android:layout_width="wrap_content"
@@ -152,9 +67,81 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passbaru"
-        app:layout_constraintVertical_bias="0.193"
         app:srcCompat="@drawable/updatebtn" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputpaswordlama"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        app:boxCornerRadiusTopStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxBackgroundColor="@color/white"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textprof">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edittextpasslama"
+            android:hint="Masukkan Password Lama"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputpasswordbaru"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        app:boxCornerRadiusTopStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxBackgroundColor="@color/white"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputpaswordlama">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edittextpassbaru"
+            android:hint="Masukkan Password Baru"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinputkonfirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        app:boxCornerRadiusTopStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxBackgroundColor="@color/white"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputpasswordbaru">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:hint="Konfirmasi Password Baru"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

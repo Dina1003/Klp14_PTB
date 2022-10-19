@@ -43,17 +43,18 @@
         app:layout_constraintTop_toBottomOf="@+id/profile"
         app:srcCompat="@drawable/propict" />
 
-    <Button
-        android:id="@+id/editfotoprofile"
+    <TextView
+        android:id="@+id/textprof"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#00FFFFFF"
-        android:text="Ubah Foto Profil"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Foto Profil"
         android:textColor="#000000"
         android:textSize="16sp"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="245dp"
         app:layout_constraintEnd_toEndOf="@+id/profict"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.581"
         app:layout_constraintStart_toStartOf="@+id/profict"
         app:layout_constraintTop_toBottomOf="@+id/profict" />
 
@@ -61,20 +62,22 @@
         android:id="@+id/notlplama"
         android:layout_width="324dp"
         android:layout_height="51dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
         android:background="@drawable/bginput"
         android:ems="10"
+        android:hint="No Telepon Lama"
         android:inputType="phone"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingEnd="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-        android:text="No Telepon Lama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.367"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editfotoprofile" />
+        app:layout_constraintTop_toBottomOf="@+id/textprof" />
 
     <EditText
         android:id="@+id/editTextPhone2"
@@ -89,7 +92,7 @@
         android:paddingEnd="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-        android:text="No Telepon Baru"
+        android:hint="No Telepon Baru"
         app:layout_constraintEnd_toEndOf="@+id/notlplama"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/notlplama"
@@ -99,15 +102,14 @@
         android:id="@+id/updatebt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="216dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="Update"
         android:onClick="update"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone2"
-        app:layout_constraintVertical_bias="0.119"
         app:srcCompat="@drawable/updatebtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
