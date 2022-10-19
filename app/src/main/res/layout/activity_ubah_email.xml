@@ -13,10 +13,12 @@
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
         android:onClick="pindah"
+        app:layout_constraintBottom_toTopOf="@+id/emailama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029"
         app:srcCompat="@drawable/ic_back" />
 
     <TextView
