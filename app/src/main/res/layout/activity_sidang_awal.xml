@@ -49,30 +49,6 @@
         app:srcCompat="@drawable/ic_button_pengajuan"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-    <TextView
-        android:id="@+id/text_jadwal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
-        android:text="Jum'at/ 21-10-2022"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Sidang_text" />
-
-    <ImageView
-        android:id="@+id/button_bukaList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="40dp"
-        android:onClick="pindah"
-        app:layout_constraintStart_toEndOf="@+id/text_jadwal"
-        app:layout_constraintTop_toBottomOf="@+id/Sidang_text"
-        app:srcCompat="@drawable/ic_bukalist"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-
 
     <ImageView
         android:id="@+id/Sidang_text"
@@ -84,6 +60,18 @@
         app:layout_constraintTop_toBottomOf="@+id/Head"
         app:srcCompat="@drawable/ic_teks_sidangakhir"
         />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSidang"
+        android:layout_width="379dp"
+        android:layout_height="498dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        tools:listitem="@layout/item_sidang"
+        app:layout_constraintBottom_toTopOf="@+id/Button_Pengajuan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -60,55 +60,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/nama_peserta"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPeserta"
         android:layout_width="350dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/text_kostum"
-        android:text="  Budi"
-        android:textAllCaps="false"
-        android:textSize="15dp"
-        android:textColor="@color/black"
+        android:layout_height="440dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/judul_peserta_Semhas" />
-
-    <TextView
-        android:id="@+id/peserta_2"
-        android:layout_width="350dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/text_kostum"
-        android:text="  Hana"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/nama_peserta"
-        app:layout_constraintStart_toStartOf="@+id/nama_peserta"
-        app:layout_constraintTop_toBottomOf="@+id/nama_peserta" />
-
-    <ImageView
-        android:id="@+id/detail_peserta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="10dp"
-        android:onClick="deatil"
-        app:layout_constraintEnd_toEndOf="@+id/nama_peserta"
-        app:layout_constraintTop_toTopOf="@+id/nama_peserta"
-        app:srcCompat="@drawable/ic_bukalist"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-    <ImageView
-        android:id="@+id/detail_peserta2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/peserta_2"
-        app:layout_constraintTop_toTopOf="@+id/peserta_2"
-        app:srcCompat="@drawable/ic_bukalist" />
+        app:layout_constraintTop_toBottomOf="@+id/judul_peserta_Semhas"
+        tools:listitem="@layout/item_peserta" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

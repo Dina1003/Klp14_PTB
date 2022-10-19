@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.myapplication.adapter.logbookAdapter;
 import com.example.myapplication.models.logbook;
@@ -89,5 +90,10 @@ public class logbookList extends AppCompatActivity implements logbookAdapter.ite
 //        detailIntent.putExtra("tanggal", agenda1.getTanggal());
         startActivity(detailIntent);
 
+    }
+
+    public void balik(View view) {
+        Intent intent = new Intent(this, HomeScreenActivity.class);
+        startActivity(intent);
     }
 }

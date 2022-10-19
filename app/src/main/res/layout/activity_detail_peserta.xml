@@ -54,63 +54,81 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="Input Peserta"
         android:onClick="input"
+        android:text="Back to List"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/nama_peserta"
-        android:layout_width="340dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/text_kostum"
-        android:text="  Budi
-                                                                                        211152xxxx
-                                                                        SI'21
-                                                                                        Sistem Informasi"
-        android:textAllCaps="false"
-        android:textSize="15dp"
-        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:text="HANA"
+        android:textColor="#CD040404"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/judul_peserta_Semhas" />
 
-    <ImageView
-        android:id="@+id/imageView3"
+    <TextView
+        android:id="@+id/ket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="2211521003"
+        android:textColor="#0C0C0C"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nama_peserta" />
+
+    <TextView
+        android:id="@+id/akt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:onClick="pindah"
-        app:layout_constraintEnd_toEndOf="@+id/nama_peserta"
-        app:layout_constraintTop_toTopOf="@+id/nama_peserta"
-        app:srcCompat="@drawable/ic_bukadetail"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        android:text="Angkatan SI' 22"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/ket"
+        app:layout_constraintTop_toBottomOf="@+id/ket" />
 
     <TextView
-        android:id="@+id/peserta_2"
-        android:layout_width="340dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/text_kostum"
-        android:text="  Hana"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/nama_peserta"
-        app:layout_constraintStart_toStartOf="@+id/nama_peserta"
-        app:layout_constraintTop_toBottomOf="@+id/nama_peserta" />
-
-    <ImageView
-        android:id="@+id/detail_peserta2"
+        android:id="@+id/sitk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/peserta_2"
-        app:layout_constraintTop_toTopOf="@+id/peserta_2"
-        app:srcCompat="@drawable/ic_bukalist" />
+        android:layout_marginTop="5dp"
+        android:text="SIstem Informasi"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/akt"
+        app:layout_constraintTop_toBottomOf="@+id/akt" />
+
+    <TextView
+        android:id="@+id/fti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Fakultas Teknologi Informasi"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/sitk"
+        app:layout_constraintTop_toBottomOf="@+id/sitk" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="179dp"
+        android:layout_height="174dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judul_peserta_Semhas"
+        app:srcCompat="@drawable/ic_profil" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
