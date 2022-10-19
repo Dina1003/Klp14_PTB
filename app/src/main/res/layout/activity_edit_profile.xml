@@ -13,6 +13,7 @@
         android:layout_height="32dp"
         android:layout_marginTop="24dp"
         android:onClick="pindah"
+        app:layout_constraintBottom_toBottomOf="@+id/ubahpass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
