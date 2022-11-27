@@ -71,7 +71,7 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
     }
 
     public void semhas(View view) {
-        Intent intent = new Intent(HomeScreenActivity.this, Semhas_Awal.class);
+        Intent intent = new Intent(HomeScreenActivity.this, DetailSemHas.class);
         startActivity(intent);
     }
 

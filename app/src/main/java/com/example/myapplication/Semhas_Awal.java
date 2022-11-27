@@ -110,4 +110,6 @@ public class Semhas_Awal extends AppCompatActivity implements AgendaAdapter.Item
 //        Toast.makeText(this, "hahha"+ agenda.getJadwal(), Toast.LENGTH_SHORT).show();
 
     }
+
+    //notifikasi
 }
