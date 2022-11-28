@@ -22,7 +22,7 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
-        rvAgenda = findViewById(R.id.rvlogbook);
+        rvAgenda = findViewById(R.id.rv_logbook);
 
         AgendaAdapter1 adapter1 = new AgendaAdapter1(getAgenda1());
         adapter1.setListener(this);
