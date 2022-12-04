@@ -63,104 +63,17 @@
         app:layout_constraintStart_toStartOf="@+id/profic"
         app:layout_constraintTop_toBottomOf="@+id/profic" />
 
-    <View
-        android:id="@+id/isijadwal"
-        android:layout_width="343dp"
-        android:layout_height="215dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/jadwal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jadwal" />
-
-    <TextView
-        android:id="@+id/namasidang"
-        android:layout_width="165dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="124dp"
-        android:text="Aulia Dwi Shaviqa Pohan"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/isijadwal"
-        app:layout_constraintHorizontal_bias="0.101"
-        app:layout_constraintStart_toStartOf="@+id/isijadwal"
-        app:layout_constraintTop_toTopOf="@+id/isijadwal" />
-
-    <ImageView
-        android:id="@+id/tanggal2"
-        android:layout_width="19dp"
-        android:layout_height="16dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="@+id/namasidang"
-        app:layout_constraintTop_toBottomOf="@+id/namasidang"
-        app:srcCompat="@drawable/ic_tanggal" />
-
-    <ImageView
-        android:id="@+id/lokasi2"
-        android:layout_width="16dp"
-        android:layout_height="18dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="@+id/jam2"
-        app:layout_constraintTop_toBottomOf="@+id/jam2"
-        app:srcCompat="@drawable/ic_lakasi" />
-
-    <ImageView
-        android:id="@+id/jam2"
-        android:layout_width="18dp"
-        android:layout_height="15dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/tanggal2"
-        app:layout_constraintTop_toBottomOf="@+id/tanggal2"
-        app:srcCompat="@drawable/ic_pukul" />
-
-    <TextView
-        android:id="@+id/namasemhas"
-        android:layout_width="163dp"
-        android:layout_height="19dp"
-        android:layout_marginTop="20dp"
-        android:text="Aulia Dwi Shaviqa Pohan"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/isijadwal"
-        app:layout_constraintHorizontal_bias="0.096"
-        app:layout_constraintStart_toStartOf="@+id/isijadwal"
-        app:layout_constraintTop_toTopOf="@+id/isijadwal" />
-
-    <ImageView
-        android:id="@+id/tanggal"
-        android:layout_width="19dp"
-        android:layout_height="15dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/namasemhas"
-        app:layout_constraintTop_toBottomOf="@+id/namasemhas"
-        app:srcCompat="@drawable/ic_tanggal" />
-
-    <ImageView
-        android:id="@+id/jam"
-        android:layout_width="19dp"
-        android:layout_height="16dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/tanggal"
-        app:layout_constraintTop_toBottomOf="@+id/tanggal"
-        app:srcCompat="@drawable/ic_pukul" />
-
-    <ImageView
-        android:id="@+id/lokasi"
-        android:layout_width="21dp"
-        android:layout_height="18dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/jam"
-        app:layout_constraintTop_toBottomOf="@+id/jam"
-        app:srcCompat="@drawable/ic_lakasi" />
-
     <TextView
         android:id="@+id/logbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="292dp"
+
         android:layout_marginStart="13dp"
         android:layout_marginTop="20dp"
+
         android:fontFamily="@font/poppins_medium"
         android:onClick="logbook"
         android:text="Logbook"
@@ -169,10 +82,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintHorizontal_bias="0.02"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/isijadwal"
         app:layout_constraintVertical_bias="0.051"
+
         tools:ignore="TouchTargetSizeCheck" />
 
     <ImageButton
@@ -190,43 +108,29 @@
         app:srcCompat="@drawable/tambah"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageView
-        android:id="@+id/button_semhas"
-        android:layout_width="83dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:onClick="semhas"
-        app:layout_constraintEnd_toEndOf="@+id/isijadwal"
-        app:layout_constraintTop_toTopOf="@+id/isijadwal"
-        app:srcCompat="@drawable/ic_button_semhas"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-    <ImageView
-        android:id="@+id/button_sidang"
-        android:layout_width="83dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="68dp"
-        android:onClick="sidang"
-        app:layout_constraintEnd_toEndOf="@+id/button_semhas"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/button_semhas"
-        app:layout_constraintTop_toBottomOf="@+id/button_semhas"
-        app:srcCompat="@drawable/ic_button_sidang"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
     <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/rvlogbook"
+        android:layout_width="383dp"
+        android:layout_height="169dp"
+        android:layout_marginBottom="108dp"
+
         android:id="@+id/rv_logbook"
         android:layout_width="343dp"
         android:layout_height="190dp"
         android:layout_marginTop="10dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
+
+        tools:listitem="@layout/item_kelas1" />
+
         app:layout_constraintTop_toBottomOf="@+id/logbook"
         app:layout_constraintVertical_bias="0.086"
         tools:listitem="@layout/item_logbook" />
+
 
     <ImageView
         android:id="@+id/image_detaillog"
@@ -237,8 +141,18 @@
         app:layout_constraintBottom_toTopOf="@+id/rv_logbook"
         app:layout_constraintStart_toEndOf="@+id/logbook"
         app:layout_constraintTop_toTopOf="@+id/logbook"
+        app:layout_constraintVertical_bias="0.318"
         app:srcCompat="@drawable/ic_bukalist"
         app:tint="#FAFAFA" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvjadwal"
+        android:layout_width="366dp"
+        android:layout_height="216dp"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="134dp"
+        tools:listitem="@layout/home"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
