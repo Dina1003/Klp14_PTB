@@ -65,6 +65,7 @@ public class FirebaseMessagingService14 extends FirebaseMessagingService {
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
         notificationManager.notify(101,builder.build());
+        
     }
 
 }
