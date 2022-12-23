@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/ic_back" />
 
     <TextView
-        android:id="@+id/profile"
+        android:id="@+id/profiletext1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -37,10 +37,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        app:layout_constraintEnd_toEndOf="@+id/profile"
+        app:layout_constraintEnd_toEndOf="@+id/profiletext1"
         app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="@+id/profile"
-        app:layout_constraintTop_toBottomOf="@+id/profile"
+        app:layout_constraintStart_toStartOf="@+id/profiletext1"
+        app:layout_constraintTop_toBottomOf="@+id/profiletext1"
         app:srcCompat="@drawable/propict" />
 
     <TextView

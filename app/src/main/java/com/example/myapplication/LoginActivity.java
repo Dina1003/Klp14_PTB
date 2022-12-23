@@ -2,7 +2,9 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -27,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
 
     TextInputEditText edittextusername, editpassword;
     ImageButton login_btn;
+    String token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 cekLogin();
             }
         });
@@ -59,44 +63,48 @@ public class LoginActivity extends AppCompatActivity {
         String username = edittextusername.getText().toString();
         String password = editpassword.getText().toString();
 
-        login_btn.setOnClickListener(new View.OnClickListener() {
+
+        String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(API_BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(new OkHttpClient.Builder().build())
+                .build();
+
+        StoryClient client = retrofit.create(StoryClient.class);
+
+        Call<LoginResponse> call = client.login(username, password);
+
+        call.enqueue(new Callback<LoginResponse>() {
             @Override
-            public void onClick(View view) {
-                String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                Toast.makeText(LoginActivity.this, "sedang login...", Toast.LENGTH_SHORT).show();
+                if (response.isSuccessful()) {
+                    LoginResponse loginResponse = response.body();
+                    if (loginResponse != null) {
 
-                Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl(API_BASE_URL)
-                        .addConverterFactory(GsonConverterFactory.create())
-                        .client(new OkHttpClient.Builder().build())
-                        .build();
+                        Toast.makeText(LoginActivity.this, "Berhasil Login", Toast.LENGTH_SHORT).show();
 
-                StoryClient client = retrofit.create(StoryClient.class);
 
-                Call<LoginResponse> call = client.login(username, password);
+                        SharedPreferences sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPref.edit();
+                        editor.putString("TOKEN", loginResponse.getAuthorisation().getToken());
+                        editor.apply();
 
-                call.enqueue(new Callback<LoginResponse>() {
-                    @Override
-                    public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
 
-                        if (response.isSuccessful()) {
-                            LoginResponse loginResponse = response.body();
-                            if (loginResponse != null && Objects.equals(loginResponse.getStatus(), "success")) {
-                                Toast.makeText(LoginActivity.this, "Berhasil Login", Toast.LENGTH_SHORT).show();
-                                Intent Intent = new Intent(LoginActivity.this, home_kosong.class);
-                                startActivity(Intent);
-                            }
-                        } else {
-                            Log.e("LoginActivity", response.message());
-                            Toast.makeText(LoginActivity.this, "Username/password anda salah", Toast.LENGTH_SHORT).show();
-                        }
-
+                        Intent mainIntent = new Intent(LoginActivity.this, home_kosong.class);
+                        startActivity(mainIntent);
                     }
+                } else {
+                    Toast.makeText(LoginActivity.this, "Username/password anda salah", Toast.LENGTH_SHORT).show();
+                }
 
-                    @Override
-                    public void onFailure(Call<LoginResponse> call, Throwable t) {
-                        Toast.makeText(LoginActivity.this, "Gagal login", Toast.LENGTH_SHORT).show();
-                    }
-                });
+            }
+
+            @Override
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
+                Toast.makeText(LoginActivity.this, "Gagal login", Toast.LENGTH_SHORT).show();
             }
         });
     }
