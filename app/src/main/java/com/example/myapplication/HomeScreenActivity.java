@@ -15,50 +15,15 @@ import java.util.ArrayList;
 
 public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapter1.itemAgenda1ClickListener{
 
-    private RecyclerView rvAgenda;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
-        rvAgenda = findViewById(R.id.rv_logbook);
-
-        AgendaAdapter1 adapter1 = new AgendaAdapter1(getAgenda1());
-        adapter1.setListener(this);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-
-        rvAgenda.setLayoutManager(layoutManager);
-        rvAgenda.setAdapter(adapter1);
-
     }
 
-    public ArrayList<Agenda1> getAgenda1(){
-        ArrayList<Agenda1> listAgenda = new ArrayList<>();
-
-        listAgenda.add(new Agenda1(
-                "Selasa/12-10-2023",
-                "Bimbingan Bab 2"
-        ));
-        listAgenda.add(new Agenda1(
-                "Rabu/20-10-2023",
-                "Bimbingan Revisi Bab 2"
-        ));
-        listAgenda.add(new Agenda1(
-                "Kamis/25-10-2023",
-                "Bimbingan Bab 3"
-        ));
-        listAgenda.add(new Agenda1(
-                "Jum'at/30-10-2023",
-                "Bimbingan Revisi Bab 3"
-        ));
-        listAgenda.add(new Agenda1(
-                "Senin/10-11-2023",
-                "Bimbingan Revisi 2 Bab 3"
-        ));
-
-        return listAgenda;
-    }
 
     public void profil(View view) {
         Intent intent = new Intent(HomeScreenActivity.this, ProfileActivity.class);
@@ -85,10 +50,6 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
         startActivity(intent);
     }
 
-    public void add(View view) {
-        Intent intent = new Intent(HomeScreenActivity.this, Logbook_Add.class);
-        startActivity(intent);
-    }
 
     public void logbook(View view) {
         Intent intent = new Intent(HomeScreenActivity.this, logbookList.class);
@@ -100,6 +61,20 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
         startActivity(intent);
     }
 
+    public void image_detailperjalanan(View view) {
+        Intent intent = new Intent(HomeScreenActivity.this, logbookList.class);
+        startActivity(intent);
+    }
+
+    public void image_detailsemhas(View view) {
+        Intent intent = new Intent(HomeScreenActivity.this, DetailSemHas.class);
+        startActivity(intent);
+    }
+
+    public void detailsidang(View view) {
+        Intent intent = new Intent(HomeScreenActivity.this, DetailSidang.class);
+        startActivity(intent);
+    }
 
 
     @Override
