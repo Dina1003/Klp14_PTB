@@ -1,14 +1,15 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,8 +17,7 @@ import com.example.myapplication.adapter.AgendaAdapter1;
 import com.example.myapplication.datamodel.ProfilResponse;
 import com.example.myapplication.models.Agenda1;
 import com.example.myapplication.retrofit.StoryClient;
-
-import java.util.ArrayList;
+import com.google.mlkit.common.sdkinternal.SharedPrefManager;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -29,9 +29,15 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapter1.itemAgenda1ClickListener{
 
+    private SharedPreferences sharedPreferences;
+    Context context;
+    private  SharedPreferences.Editor editor;
     TextView username;
     String token;
 
+    SharedPrefManager sharedPrefManager;
+    ImageView logout_btn;
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +46,17 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
         SharedPreferences sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE);
         token = sharedPref.getString("TOKEN","");
 
+        sharedPrefManager = new SharedPrefManager(this);
+
+        logout_btn = findViewById(R.id.iconlogout);
+
+        logout_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                out();
+            }
+        });
     }
 
     private void getUsername() {
@@ -85,12 +102,24 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
         startActivity(intent);
     }
 
-    public void out(View view) {
+    //Log-Out
+    private void out() {
+        SharedPreferences sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE);
+        editor = sharedPref.edit();
+        editor.clear();
+        editor.apply();
+
         Intent intent = new Intent(HomeScreenActivity.this, LoginActivity.class);
         startActivity(intent);
     }
 
+    /*public void logout(View view) {
+        Intent intent = new Intent(HomeScreenActivity.this, LoginActivity.class);
+        startActivity(intent);
+    }
+*/
     public void semhas(View view) {
+
         Intent intent = new Intent(HomeScreenActivity.this, DetailSemHas.class);
         startActivity(intent);
     }
@@ -138,4 +167,6 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
 //        detailIntent.putExtra("tanggal", agenda1.getTanggal());
         startActivity(detailIntent);
     }
+
+
 }
