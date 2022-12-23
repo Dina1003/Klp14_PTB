@@ -17,7 +17,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25"
+        app:layout_constraintVertical_bias="1.0"
         tools:listitem="@layout/item_logbook" />
 
     <TextView
@@ -33,5 +33,19 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/tambah"
+        android:layout_width="93dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="80dp"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="add"
+        app:layout_constraintBottom_toTopOf="@+id/rv_logbook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_list"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tambah"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

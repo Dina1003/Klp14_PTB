@@ -41,13 +41,14 @@
 
     <ImageView
         android:id="@+id/Button_Pengajuan"
-        android:layout_width="wrap_content"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="15dp"
         android:onClick="form"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cv_sidang"
+        app:layout_constraintStart_toEndOf="@+id/labelsemhassaya"
+        app:layout_constraintTop_toBottomOf="@+id/SemHas_Text"
         app:srcCompat="@drawable/ic_button_pengajuan"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
@@ -61,16 +62,100 @@
         app:layout_constraintTop_toBottomOf="@+id/Head"
         app:srcCompat="@drawable/ic_tekssemhas" />
 
+    <TextView
+        android:id="@+id/labelsemhassaya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SemHas_Text"
+        android:layout_alignStart="@+id/SemHas_Text"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+
+        android:fontFamily="@font/poppins_medium"
+        android:text="Jadwal Sidang Saya"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SemHas_Text" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_sidang"
+        android:layout_width="352dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="@color/yellow"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@id/labelsemhasorang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelsemhassaya">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/label_cvsemhas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tanggalsemhas"
+                android:layout_alignStart="@+id/tanggalsemhas"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Belum mengajukan sidang"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tanggalsemhas"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+
+                android:fontFamily="@font/poppins_medium"
+                android:text="-"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/labelsemhasorang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cv_sidang"
+        android:layout_alignStart="@+id/cv_sidang"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+
+        android:fontFamily="@font/poppins_medium"
+        android:text="Jadwal Sidang Lainnya"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_sidang"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvAgenda"
-        android:layout_width="358dp"
-        android:layout_height="454dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="379dp"
+        android:layout_height="498dp"
+        android:layout_marginTop="190dp"
         android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/Button_Pengajuan"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SemHas_Text"
+        app:layout_constraintVertical_bias="0.569"
         tools:listitem="@layout/item_kelas" />
 
 

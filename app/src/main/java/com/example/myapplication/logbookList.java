@@ -96,4 +96,10 @@ public class logbookList extends AppCompatActivity implements logbookAdapter.ite
         Intent intent = new Intent(this, HomeScreenActivity.class);
         startActivity(intent);
     }
+
+    public void add(View view) {
+        Intent intent = new Intent(this, Logbook_Add.class);
+        startActivity(intent);
+    }
+
 }

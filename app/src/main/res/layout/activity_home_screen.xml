@@ -7,6 +7,7 @@
     android:background="@drawable/bgrn"
     tools:context=".HomeScreenActivity">
 
+
     <ImageView
         android:id="@+id/profic"
         android:layout_width="58dp"
@@ -49,12 +50,12 @@
         app:layout_constraintTop_toTopOf="@+id/profic" />
 
     <TextView
-        android:id="@+id/jadwal"
+        android:id="@+id/journey"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Jadwal Semhas dan Sidang"
+        android:text="Perjalananku"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -63,93 +64,348 @@
         app:layout_constraintStart_toStartOf="@+id/profic"
         app:layout_constraintTop_toBottomOf="@+id/profic" />
 
+    <ImageView
+        android:id="@+id/image_detailperjalanan"
+        android:layout_width="53dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="12dp"
+        android:onClick="image_detailperjalanan"
+
+        app:layout_constraintStart_toEndOf="@+id/journey"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:srcCompat="@drawable/ic_bukalist"
+        app:tint="#FAFAFA" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_perjalanan"
+        android:layout_width="352dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/journey">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/judulperjalanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tanggalperjalanan"
+                android:layout_alignStart="@+id/tanggalperjalanan"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Progress TA"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tanggalperjalanan"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+
+                android:fontFamily="@font/poppins_medium"
+                android:text="21 desember 2022"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <GridLayout
+        android:id="@+id/gridjadwal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-48dp"
+        android:layout_marginBottom="80dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:columnOrderPreserved="false"
+        android:rowCount="1"
+        app:layout_constraintBottom_toTopOf="@+id/logbook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/gridjudul"
+        app:layout_constraintTop_toBottomOf="@+id/gridjudul">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_semhas"
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="369dp">
+
+                <TextView
+                    android:id="@+id/judulsemhas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tanggalsemhas"
+                    android:layout_alignStart="@+id/tanggalsemhas"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Progress TA"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tanggalsemhas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="21 desember 2022"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="6dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="369dp">
+
+                <TextView
+                    android:id="@+id/judulsidang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tanggalsidang"
+                    android:layout_alignStart="@+id/tanggalsidang"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Progress TA"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tanggalsidang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="21 desember 2022"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+
+    <GridLayout
+        android:id="@+id/gridjudul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:columnOrderPreserved="false"
+        android:rowCount="1"
+        app:layout_constraintBottom_toTopOf="@+id/gridjadwal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_perjalanan"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/labelsemhas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Jadwal Semhas"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:onClick="image_detailsemhas"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/gridjadwal"
+            app:layout_constraintEnd_toEndOf="@id/cv_perjalanan"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="@+id/cv_perjalanan"
+            app:layout_constraintTop_toBottomOf="@+id/cv_perjalanan"
+            app:layout_constraintVertical_bias="0.474" />
+
+
+
+        <TextView
+            android:id="@+id/sidanglabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_marginLeft="80dp"
+            android:layout_marginBottom="60dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Jadwal Sidang"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:onClick="detailsidang"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/gridjadwal"
+            app:layout_constraintEnd_toEndOf="@id/cv_perjalanan"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="@+id/cv_perjalanan"
+            app:layout_constraintTop_toBottomOf="@+id/cv_perjalanan"
+            app:layout_constraintVertical_bias="0.474" />
+
+    </GridLayout>
+
     <TextView
         android:id="@+id/logbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-
-        android:layout_marginBottom="292dp"
-
         android:layout_marginStart="13dp"
         android:layout_marginTop="20dp"
-
         android:fontFamily="@font/poppins_medium"
         android:onClick="logbook"
         android:text="Logbook"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-
-
-
-        app:layout_constraintHorizontal_bias="0.02"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rvjadwal"
-        app:layout_constraintVertical_bias="0.051"
-
+        app:layout_constraintTop_toBottomOf="@id/gridjadwal"
         tools:ignore="TouchTargetSizeCheck" />
 
-    <ImageButton
-        android:id="@+id/tambah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#00FFFFFF"
-        android:onClick="add"
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_logbook"
+        android:layout_width="352dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="184dp"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_logbook"
-        app:srcCompat="@drawable/tambah"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/logbook">
 
-    <androidx.recyclerview.widget.RecyclerView
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView8"
+                android:layout_alignStart="@+id/textView8"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Progress TA"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+
+                android:fontFamily="@font/poppins_medium"
+                android:text="21 desember 2022"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <ImageButton
+                android:id="@+id/imageView7"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView8"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="280dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/cardview_light_background"
+                app:srcCompat="@drawable/ic_bukalist" />
 
 
-        android:layout_marginBottom="108dp"
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
-        android:id="@+id/rv_logbook"
-        android:layout_width="343dp"
-        android:layout_height="190dp"
-        android:layout_marginTop="10dp"
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="parent"
 
-        tools:listitem="@layout/item_kelas1" />
+    <!--        android:layout_marginBottom="108dp"-->
 
-        app:layout_constraintTop_toBottomOf="@+id/logbook"
-        app:layout_constraintVertical_bias="0.086"
-        tools:listitem="@layout/item_logbook" />
+    <!--        android:id="@+id/rv_logbook"-->
+    <!--        android:layout_width="343dp"-->
+    <!--        android:layout_height="190dp"-->
+    <!--        android:layout_marginTop="10dp"-->
+
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.428"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+
+    <!--        tools:listitem="@layout/item_logbook" />-->
 
 
     <ImageView
         android:id="@+id/image_detaillog"
         android:layout_width="53dp"
         android:layout_height="65dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
         android:layout_marginBottom="30dp"
         android:onClick="image_detaillog"
-        app:layout_constraintBottom_toTopOf="@+id/rv_logbook"
+
         app:layout_constraintStart_toEndOf="@+id/logbook"
-        app:layout_constraintTop_toTopOf="@+id/logbook"
+        app:layout_constraintTop_toBottomOf="@+id/gridjadwal"
         app:layout_constraintVertical_bias="0.318"
         app:srcCompat="@drawable/ic_bukalist"
         app:tint="#FAFAFA" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvjadwal"
-        android:layout_width="366dp"
-        android:layout_height="216dp"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="134dp"
-        tools:listitem="@layout/home"
-        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
