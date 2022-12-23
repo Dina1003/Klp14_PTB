@@ -22,6 +22,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.myapplication.datamodel.ProfilResponse;
 import com.example.myapplication.retrofit.StoryClient;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -133,12 +134,19 @@ public class ProfileActivity extends AppCompatActivity {
 //                    Log.d("YYPROFILEACTIVITY", "Hasilnya: " + response.body().getEmail());
                     String nama = user.getName();
                     String nim = user.getUsername();
+                    String email = user.getEmail();
 
                     TextView castName = findViewById(R.id.name);
                     TextView castNim = findViewById(R.id.nim2);
+                    TextView castEmail = findViewById(R.id.email);
 
                     castName.setText(nama);
                     castNim.setText(nim);
+                    castEmail.setText(email);
+
+                    ImageView imageView = (ImageView) findViewById(R.id.profict);
+
+                    Glide.with(ProfileActivity.this).load(user.getProfilePhotoPath()).into(imageView);
                 }
             }
 
