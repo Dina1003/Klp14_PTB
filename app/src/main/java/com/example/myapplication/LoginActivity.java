@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationManagerCompat;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,13 +10,20 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.myapplication.datamodel.LoginResponse;
+import com.example.myapplication.dina.Constants1;
+import com.example.myapplication.dina.AccessToken;
 import com.example.myapplication.retrofit.StoryClient;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.messaging.Constants;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.Objects;
 
@@ -30,11 +39,34 @@ public class LoginActivity extends AppCompatActivity {
     TextInputEditText edittextusername, editpassword;
     ImageButton login_btn;
     String token;
+    private static final String TAG = "Service-Debug";
+    private static final String CHANNEL_ID= "Kelompok 14";
+    private NotificationManagerCompat notificationManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        //notifikasi firebase
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(new OnCompleteListener<String>() {
+                    @Override
+                    public void onComplete(@NonNull Task<String> task) {
+                        if (!task.isSuccessful()) {
+                            Log.w(TAG, "Fetching FCM registration token failed", task.getException());
+                            return;
+                        }
+
+                        // Get new FCM registration token
+                        String token = task.getResult();
+
+                        // Log and toast
+
+                        Log.d(TAG, token);
+                        Toast.makeText(LoginActivity.this, token, Toast.LENGTH_SHORT).show();
+                    }
+                });
 
 
         login_btn = findViewById(R.id.login_btn);
@@ -81,6 +113,12 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 Toast.makeText(LoginActivity.this, "sedang login...", Toast.LENGTH_SHORT).show();
                 if (response.isSuccessful()) {
+                    //logout
+
+                    //Constants1.REFRESH_TOKEN = response.body().getRefreshToken();
+
+                    //
+
                     LoginResponse loginResponse = response.body();
                     if (loginResponse != null) {
 

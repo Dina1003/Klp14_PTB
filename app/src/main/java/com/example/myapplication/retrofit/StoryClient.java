@@ -1,9 +1,11 @@
 package com.example.myapplication.retrofit;
 
 import com.example.myapplication.datamodel.LoginResponse;
+import com.example.myapplication.datamodel.LogoutResponse;
 import com.example.myapplication.datamodel.ProfilResponse;
 import com.example.myapplication.datamodel.User;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -19,4 +21,7 @@ public interface StoryClient {
 
     @GET("/api/me")
     Call<ProfilResponse> profill(@Header("Authorization") String token);
+
+    @POST("/api/logout")
+    Call<LogoutResponse> logout(@Header("Authorization") String token);
 }
