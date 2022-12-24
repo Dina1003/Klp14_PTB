@@ -26,7 +26,6 @@
         android:layout_height="56dp"
         android:layout_marginStart="286dp"
         android:layout_marginBottom="4dp"
-        android:onClick="out"
         app:layout_constraintBottom_toBottomOf="@+id/profic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -74,7 +73,8 @@
         app:layout_constraintStart_toEndOf="@+id/journey"
         app:layout_constraintTop_toBottomOf="@+id/username"
         app:srcCompat="@drawable/ic_bukalist"
-        app:tint="#FAFAFA" />
+        app:tint="#FAFAFA"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_perjalanan"
@@ -259,18 +259,18 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="60dp"
             android:fontFamily="@font/poppins_medium"
+            android:onClick="image_detailsemhas"
             android:text="Jadwal Semhas"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:onClick="image_detailsemhas"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/gridjadwal"
             app:layout_constraintEnd_toEndOf="@id/cv_perjalanan"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="@+id/cv_perjalanan"
             app:layout_constraintTop_toBottomOf="@+id/cv_perjalanan"
-            app:layout_constraintVertical_bias="0.474" />
-
+            app:layout_constraintVertical_bias="0.474"
+            tools:ignore="TouchTargetSizeCheck" />
 
 
         <TextView
@@ -282,17 +282,18 @@
             android:layout_marginLeft="80dp"
             android:layout_marginBottom="60dp"
             android:fontFamily="@font/poppins_medium"
+            android:onClick="detailsidang"
             android:text="Jadwal Sidang"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:onClick="detailsidang"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/gridjadwal"
             app:layout_constraintEnd_toEndOf="@id/cv_perjalanan"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="@+id/cv_perjalanan"
             app:layout_constraintTop_toBottomOf="@+id/cv_perjalanan"
-            app:layout_constraintVertical_bias="0.474" />
+            app:layout_constraintVertical_bias="0.474"
+            tools:ignore="TouchTargetSizeCheck" />
 
     </GridLayout>
 
@@ -368,7 +369,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:background="@color/cardview_light_background"
-                app:srcCompat="@drawable/ic_bukalist" />
+                app:srcCompat="@drawable/ic_bukalist"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 
         </RelativeLayout>
@@ -398,14 +400,13 @@
         android:layout_height="65dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="30dp"
         android:onClick="image_detaillog"
 
         app:layout_constraintStart_toEndOf="@+id/logbook"
         app:layout_constraintTop_toBottomOf="@+id/gridjadwal"
-        app:layout_constraintVertical_bias="0.318"
         app:srcCompat="@drawable/ic_bukalist"
-        app:tint="#FAFAFA" />
+        app:tint="#FAFAFA"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -89,7 +89,15 @@
         app:srcCompat="@drawable/ic_teks_sidangakhir"
         />
 
-
+    <Button
+        android:id="@+id/btnNotif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Notifikasi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textdetail" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,8 @@ public class LoginResponse{
     @SerializedName("status")
     private String status;
 
+
+
     public Authorisation getAuthorisation(){
         return authorisation;
     }
@@ -24,4 +26,6 @@ public class LoginResponse{
     public String getStatus(){
         return status;
     }
+
+
 }
