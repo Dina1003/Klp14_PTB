@@ -58,56 +58,56 @@ public class ProfileActivity extends AppCompatActivity {
         SharedPreferences sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE);
         token = sharedPref.getString("TOKEN","");
 
-        getProfile();
+        getProfile(); }
 
 //        profile = findViewById (R.id.profil);
 
-        FirebaseMessaging.getInstance().getToken()
-                .addOnCompleteListener(new OnCompleteListener<String>() {
-                    @Override
-                    public void onComplete(@NonNull Task<String> task) {
-                        if (!task.isSuccessful()) {
-                            Log.w(TAG, "Fetching FCM registration token failed", task.getException());
-                            return;
-                        }
-
-                        // Get new FCM registration token
-                        String token = task.getResult();
-
-                        // Log and toast
-                        Log.d(TAG, token);
-                        Toast.makeText(ProfileActivity.this, token, Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-        notificationManager = NotificationManagerCompat.from(this);
-
-        createNotificationChannel();
-
-        gantipass = findViewById(R.id.gantipass);
-        gantipass.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent resultIntent = new Intent(ProfileActivity.this, EditProfileActivity.class);
-                TaskStackBuilder stackBuilder = TaskStackBuilder.create(ProfileActivity.this);
-                stackBuilder.addNextIntentWithParentStack(resultIntent);
-                PendingIntent resultPendingIntent =
-                        stackBuilder.getPendingIntent(0,
-                                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
-
-
-                NotificationCompat.Builder builder = new NotificationCompat.Builder(ProfileActivity.this, CHANNEL_ID)
-                        .setSmallIcon(R.drawable.ic_notifikasi)
-                        .setContentTitle("Perubahan Password")
-                        .setContentText("tindakn Perubahan Password, apakah itu anda? tekan  untuk melanjutkan")
-                        .addAction(R.drawable.ic_notifikasi, "Selengkapnya", resultPendingIntent)
-                        .setPriority(NotificationCompat.PRIORITY_DEFAULT);
-
-                notificationManager.notify(101, builder.build());
-            }
-        });
-    }
+//        FirebaseMessaging.getInstance().getToken()
+//                .addOnCompleteListener(new OnCompleteListener<String>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<String> task) {
+//                        if (!task.isSuccessful()) {
+//                            Log.w(TAG, "Fetching FCM registration token failed", task.getException());
+//                            return;
+//                        }
+//
+//                        // Get new FCM registration token
+//                        String token = task.getResult();
+//
+//                        // Log and toast
+//                        Log.d(TAG, token);
+//                        Toast.makeText(ProfileActivity.this, token, Toast.LENGTH_SHORT).show();
+//                    }
+//                });
+//
+//        notificationManager = NotificationManagerCompat.from(this);
+//
+//        createNotificationChannel();
+//
+//        gantipass = findViewById(R.id.gantipass);
+//        gantipass.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                Intent resultIntent = new Intent(ProfileActivity.this, EditProfileActivity.class);
+//                TaskStackBuilder stackBuilder = TaskStackBuilder.create(ProfileActivity.this);
+//                stackBuilder.addNextIntentWithParentStack(resultIntent);
+//                PendingIntent resultPendingIntent =
+//                        stackBuilder.getPendingIntent(10,
+//                                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+//
+//
+//                NotificationCompat.Builder builder = new NotificationCompat.Builder(ProfileActivity.this, CHANNEL_ID)
+//                        .setSmallIcon(R.drawable.ic_notifikasi)
+//                        .setContentTitle("Perubahan Password")
+//                        .setContentText("tindakn Perubahan Password, apakah itu anda? tekan  untuk melanjutkan")
+//                        .addAction(R.drawable.ic_notifikasi, "Selengkapnya", resultPendingIntent)
+//                        .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+//
+//                notificationManager.notify(101, builder.build());
+//            }
+//        });
+//    }
 
     private void getProfile() {
         String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
@@ -160,16 +160,16 @@ public class ProfileActivity extends AppCompatActivity {
     private void cekprofile() {
     }
 
-    private void createNotificationChannel() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-
-            int importance = NotificationManager.IMPORTANCE_HIGH;
-            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, "Permintaan ganti password", importance);
-            channel.setDescription("Anda mencoba mengubah password");
-            notificationManager.createNotificationChannel(channel);
-
-        }
-    }
+//    private void createNotificationChannel() {
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//
+//            int importance = NotificationManager.IMPORTANCE_HIGH;
+//            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, "Permintaan ganti password", importance);
+//            channel.setDescription("Anda mencoba mengubah password");
+//            notificationManager.createNotificationChannel(channel);
+//
+//        }
+//    }
 
 
     public void home(View view) {
