@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:background="#00000000"
         android:contentDescription="updatepass"
-        android:onClick="update"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -139,6 +139,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputpasswordbaru">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/konfirmasipass"
             android:hint="Konfirmasi Password Baru"
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
