@@ -3,6 +3,7 @@ package com.example.myapplication.retrofit;
 import com.example.myapplication.datamodel.LoginResponse;
 import com.example.myapplication.datamodel.LogoutResponse;
 import com.example.myapplication.datamodel.ProfilResponse;
+import com.example.myapplication.datamodel.UbahPassword;
 import com.example.myapplication.datamodel.User;
 
 import okhttp3.ResponseBody;
@@ -22,6 +23,12 @@ public interface StoryClient {
     @GET("/api/me")
     Call<ProfilResponse> profill(@Header("Authorization") String token);
 
+
     @POST("/api/logout")
     Call<LogoutResponse> logout(@Header("Authorization") String token);
+
+    @FormUrlEncoded
+    @POST("/api/password")
+    Call<UbahPassword> UbahPassword(@Header("Authorization") String token, @Field("old_password") String old_password, @Field("new_password") String new_password, @Field("confirm_password") String confirm_password);
+
 }
