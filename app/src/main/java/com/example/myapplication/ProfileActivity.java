@@ -183,7 +183,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void ubah_email(View view) {
-        Intent intent = new Intent(ProfileActivity.this, UbahEmailActivity.class);
+        Intent intent = new Intent(ProfileActivity.this, ubah_email.class);
         startActivity(intent);
     }
 

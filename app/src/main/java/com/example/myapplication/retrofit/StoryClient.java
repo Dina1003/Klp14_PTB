@@ -4,6 +4,7 @@ import com.example.myapplication.datamodel.LoginResponse;
 import com.example.myapplication.datamodel.LogoutResponse;
 import com.example.myapplication.datamodel.ProfilResponse;
 import com.example.myapplication.datamodel.UbahPassword;
+import com.example.myapplication.datamodel.UpdateProfilResponse;
 import com.example.myapplication.datamodel.User;
 
 import okhttp3.ResponseBody;
@@ -30,5 +31,9 @@ public interface StoryClient {
     @FormUrlEncoded
     @POST("/api/password")
     Call<UbahPassword> UbahPassword(@Header("Authorization") String token, @Field("old_password") String old_password, @Field("new_password") String new_password, @Field("confirm_password") String confirm_password);
+
+    @FormUrlEncoded
+    @POST("/api/me/update")
+    Call<UpdateProfilResponse> UpdateProfilResponse(@Header("Authorization") String token, @Field("email") String email, @Field("name") String name);
 
 }
