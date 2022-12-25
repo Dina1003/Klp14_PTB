@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.example.myapplication.adapter.AgendaAdapter1;
 import com.example.myapplication.datamodel.LogoutResponse;
 import com.example.myapplication.datamodel.ProfilResponse;
+import com.example.myapplication.datamodel.UbahPassword;
 import com.example.myapplication.dina.Constants1;
 import com.example.myapplication.models.Agenda1;
 import com.example.myapplication.retrofit.StoryClient;
@@ -75,7 +76,8 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
             @Override
             public void onResponse(Call<LogoutResponse> call, Response<LogoutResponse> response) {
                 if(response.isSuccessful()){
-                    Toast.makeText(HomeScreenActivity.this, "Sampai Jumpa Ges", Toast.LENGTH_SHORT).show();
+                    LogoutResponse ganti = response.body();
+                    Toast.makeText(HomeScreenActivity.this, ganti.getMessage(), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(HomeScreenActivity.this, LoginActivity.class);
                     startActivity(intent);
                 }

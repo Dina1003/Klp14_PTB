@@ -15,12 +15,16 @@
         android:theme="@style/Theme.MyApplicationNoActionBar"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".ubah_email"
+            android:exported="false" />
+
         <service
             android:name=".dina.MyFirebaseMessagingService"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
@@ -82,11 +86,12 @@
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".UbahEmailActivity"
-            android:exported="false" />
-        <activity
             android:name=".UbahNoTlpActivity"
             android:exported="false" />
+        <activity
+            android:name=".ubah_email"
+            android:exported="false"
+            tools:ignore="DuplicateActivity" />
         <activity
             android:name=".logbookList"
             android:exported="false" />
