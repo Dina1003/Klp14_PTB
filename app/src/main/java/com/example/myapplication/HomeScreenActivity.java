@@ -54,8 +54,11 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
+
         SharedPreferences sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE);
         token = sharedPref.getString("TOKEN","");
+
+        getUsername();
 
         sharedPrefManager = new SharedPrefManager(this);
 
