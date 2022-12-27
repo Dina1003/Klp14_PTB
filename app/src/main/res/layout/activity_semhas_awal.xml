@@ -72,7 +72,7 @@
         android:layout_marginTop="20dp"
 
         android:fontFamily="@font/poppins_medium"
-        android:text="Jadwal Sidang Saya"
+        android:text="Jadwal Semhas Saya"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -139,11 +139,11 @@
         android:layout_marginTop="20dp"
 
         android:fontFamily="@font/poppins_medium"
-        android:text="Jadwal Sidang Lainnya"
+        android:text="Jadwal Semhas Lainnya"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cv_sidang"/>
+        app:layout_constraintTop_toBottomOf="@+id/cv_sidang" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvAgenda"

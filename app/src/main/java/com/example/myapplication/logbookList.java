@@ -8,12 +8,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.myapplication.adapter.logbookAdapter;
+import com.example.myapplication.adapter.LogbookAdapter;
 import com.example.myapplication.models.logbook;
 
 import java.util.ArrayList;
 
-public class logbookList extends AppCompatActivity implements logbookAdapter.itemLogbookClickListener{
+public class logbookList extends AppCompatActivity implements LogbookAdapter.itemLogbookClickListener{
 
     private RecyclerView rvLogbook;
 
@@ -26,7 +26,7 @@ public class logbookList extends AppCompatActivity implements logbookAdapter.ite
 
         rvLogbook = findViewById(R.id.rv_logbook);
 
-        logbookAdapter adapter = new logbookAdapter(getlogbook());
+        LogbookAdapter adapter = new LogbookAdapter(getlogbook());
         adapter.setListener(this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
