@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.adapter.logbookAdapter;
+import com.example.myapplication.adapter.LogbookAdapter;
 import com.example.myapplication.models.logbook;
 
 import java.util.ArrayList;
@@ -24,7 +24,7 @@ public class HalamanLogbookActivity extends AppCompatActivity{
         setContentView(R.layout.activity_halaman_logbook);
 
         rvlogbook =findViewById(R.id.rvlogbook);
-        logbookAdapter adapter = new logbookAdapter(getLogbook());
+        LogbookAdapter adapter = new LogbookAdapter(getLogbook());
         LinearLayoutManager layoutManager = new LinearLayoutManager((this));
 
         rvlogbook.setLayoutManager(layoutManager);
