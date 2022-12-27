@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
@@ -12,15 +13,21 @@ import android.app.TaskStackBuilder;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class Logbook_Add extends AppCompatActivity {
 
     //notifikasi
     //1. deklarasi objek
-    private static final String CHANNEL_ID= "Kelompok 14";
+    private static final String CHANNEL_ID= "Text Channel";
 
     private Button add;
     private NotificationManagerCompat notificationManager;
@@ -30,11 +37,13 @@ public class Logbook_Add extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logbook_add);
 
+        // 1. Ambil notification manager
+        notificationManager = NotificationManagerCompat.from(this);
 
 
         //2. panggil objek
         add = findViewById(R.id.add);
-        notificationManager = NotificationManagerCompat.from(this);
+
         //creat channel
         createNotificationChannel();
 
@@ -64,11 +73,13 @@ public class Logbook_Add extends AppCompatActivity {
                 //7.tampilkan notifikasi
                 notificationManager.notify(102, builder.build());
 
-                Intent intent = new Intent(Logbook_Add.this, HomeScreenActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(Logbook_Add.this, HomeScreenActivity.class);
+//                startActivity(intent);
             }
 
         });
+
+
 
     }
 

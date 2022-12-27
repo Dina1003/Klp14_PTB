@@ -48,25 +48,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        //notifikasi firebase
-        FirebaseMessaging.getInstance().getToken()
-                .addOnCompleteListener(new OnCompleteListener<String>() {
-                    @Override
-                    public void onComplete(@NonNull Task<String> task) {
-                        if (!task.isSuccessful()) {
-                            Log.w(TAG, "Fetching FCM registration token failed", task.getException());
-                            return;
-                        }
 
-                        // Get new FCM registration token
-                        String token = task.getResult();
 
-                        // Log and toast
-
-                        Log.d(TAG, token);
-                        Toast.makeText(LoginActivity.this, token, Toast.LENGTH_SHORT).show();
-                    }
-                });
 
 
         login_btn = findViewById(R.id.login_btn);

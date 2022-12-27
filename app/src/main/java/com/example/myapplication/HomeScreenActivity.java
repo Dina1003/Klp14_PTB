@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -7,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -20,6 +22,9 @@ import com.example.myapplication.datamodel.UbahPassword;
 import com.example.myapplication.dina.Constants1;
 import com.example.myapplication.models.Agenda1;
 import com.example.myapplication.retrofit.StoryClient;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.mlkit.common.sdkinternal.SharedPrefManager;
 import com.example.myapplication.RetrofitClientInstance;
 
@@ -39,6 +44,7 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
     private  SharedPreferences.Editor editor;
     TextView username;
     String token;
+
 
     SharedPrefManager sharedPrefManager;
     ImageView logout_btn;
@@ -151,14 +157,14 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
 */
     public void semhas(View view) {
 
-        Intent intent = new Intent(HomeScreenActivity.this, DetailSemHas.class);
+        Intent intent = new Intent(HomeScreenActivity.this, Semhas_Awal.class);
         startActivity(intent);
     }
 
-    public void sidang(View view) {
-        Intent intent = new Intent(HomeScreenActivity.this, Sidang_Awal.class);
-        startActivity(intent);
-    }
+//    public void sidang(View view) {
+//        Intent intent = new Intent(HomeScreenActivity.this, Sidang_Awal.class);
+//        startActivity(intent);
+//    }
 
     public void detail(View view) {
         Intent intent = new Intent(HomeScreenActivity.this, Logbook_Detail.class);
@@ -182,12 +188,12 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
     }
 
     public void image_detailsemhas(View view) {
-        Intent intent = new Intent(HomeScreenActivity.this, DetailSemHas.class);
+        Intent intent = new Intent(HomeScreenActivity.this, Semhas_Awal.class);
         startActivity(intent);
     }
 
     public void detailsidang(View view) {
-        Intent intent = new Intent(HomeScreenActivity.this, DetailSidang.class);
+        Intent intent = new Intent(HomeScreenActivity.this, Sidang_Awal.class);
         startActivity(intent);
     }
 

@@ -22,6 +22,8 @@ public class logbookList extends AppCompatActivity implements logbookAdapter.ite
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logbook);
 
+
+
         rvLogbook = findViewById(R.id.rv_logbook);
 
         logbookAdapter adapter = new logbookAdapter(getlogbook());

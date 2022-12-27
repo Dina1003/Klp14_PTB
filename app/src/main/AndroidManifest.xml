@@ -15,18 +15,18 @@
         android:theme="@style/Theme.MyApplicationNoActionBar"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-        <activity
-            android:name=".ubah_email"
-            android:exported="false" />
+
 
         <service
-            android:name=".dina.MyFirebaseMessagingService"
+            android:name=".FirebaseMessagingService14"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+
 
         <activity
             android:name=".home_kosong"

@@ -100,7 +100,7 @@ public class EditProfileActivity extends AppCompatActivity {
                         startActivity(mainIntent);
                     }
                 } else {
-                    Toast.makeText(EditProfileActivity.this, "Username/password anda salah", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(EditProfileActivity.this, "Gagal ganti password", Toast.LENGTH_SHORT).show();
                 }
 
             }
