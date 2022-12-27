@@ -21,50 +21,53 @@ import com.google.firebase.messaging.RemoteMessage;
 public class FirebaseMessagingService14 extends FirebaseMessagingService {
 
     private static final String CHANNEL_ID = "Text Channel";
+    private static final String TAG = "Service";
     private NotificationManagerCompat notificationManager;
 
-    public FirebaseMessagingService14() {
-    }
 
     @Override
     public void onNewToken(@NonNull String token){
-        Log.d("newtoken", "refresh Token"+ token);
+        Log.d(TAG,"refresh Token"+ token);
     }
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
 
+        //Check if message contains a data payload
         displayNotification(remoteMessage.getNotification());
+
+
 
     }
 
     private void displayNotification(RemoteMessage.Notification notification) {
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-
-            int importance = NotificationManager.IMPORTANCE_HIGH;
-            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, "Permintaan ganti password", importance);
+            CharSequence name = "Notifikasi";
+            String description = "Jadwal seminar telah keluar bestiee";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
             channel.setDescription("Anda mencoba mengubah password");
-            notificationManager.createNotificationChannel(channel);
+            NotificationManagerCompat.from(this).createNotificationChannel(channel);
 
         }
 
-        Intent resultIntent = new Intent(this, EditProfileActivity.class);
+        Intent resultIntent = new Intent(this, Semhas_Awal.class);
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
         stackBuilder.addNextIntentWithParentStack(resultIntent);
         PendingIntent resultPendingIntent =
                 stackBuilder.getPendingIntent(0,
                         PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
-
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this,CHANNEL_ID)
+        NotificationCompat.Builder builder = null;
+        builder = new NotificationCompat.Builder(this,CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_notifikasi)
-                .setContentTitle("Perubahan Password")
-                .setContentText("tindakan Perubahan Password, apakah itu anda? tekan  untuk melanjutkan")
+                .setContentTitle("Notifikasi")
+                .setContentText("Jadwal seminar telah keluar bestiee")
                 .addAction(R.drawable.ic_notifikasi, "Selengkapnya", resultPendingIntent)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
-        notificationManager.notify(101,builder.build());
+        NotificationManagerCompat.from(this).notify(112,builder.build());
         
     }
 

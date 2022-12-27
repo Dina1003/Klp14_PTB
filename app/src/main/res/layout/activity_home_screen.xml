@@ -63,18 +63,6 @@
         app:layout_constraintStart_toStartOf="@+id/profic"
         app:layout_constraintTop_toBottomOf="@+id/profic" />
 
-    <ImageView
-        android:id="@+id/image_detailperjalanan"
-        android:layout_width="53dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="12dp"
-        android:onClick="image_detailperjalanan"
-
-        app:layout_constraintStart_toEndOf="@+id/journey"
-        app:layout_constraintTop_toBottomOf="@+id/username"
-        app:srcCompat="@drawable/ic_bukalist"
-        app:tint="#FAFAFA"
-        tools:ignore="SpeakableTextPresentCheck" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_perjalanan"
@@ -162,10 +150,10 @@
                     android:layout_below="@+id/tanggalsemhas"
                     android:layout_alignStart="@+id/tanggalsemhas"
                     android:layout_marginStart="0dp"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_marginTop="7dp"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Progress TA"
+                    android:text="Jadwal SemHas"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
@@ -215,7 +203,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="7dp"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Progress TA"
+                    android:text="Jadwal Sidang"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
@@ -279,7 +267,7 @@
             android:layout_height="wrap_content"
             android:layout_row="0"
             android:layout_column="1"
-            android:layout_marginLeft="80dp"
+            android:layout_marginLeft="75dp"
             android:layout_marginBottom="60dp"
             android:fontFamily="@font/poppins_medium"
             android:onClick="detailsidang"
@@ -341,7 +329,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="7dp"
                 android:fontFamily="@font/poppins_medium"
-                android:text="Progress TA"
+                android:text="Catatan LogBook"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
