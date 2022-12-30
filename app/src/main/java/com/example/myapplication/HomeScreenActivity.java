@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -10,7 +9,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,18 +16,12 @@ import android.widget.Toast;
 import com.example.myapplication.adapter.AgendaAdapter1;
 import com.example.myapplication.datamodel.LogoutResponse;
 import com.example.myapplication.datamodel.ProfilResponse;
-import com.example.myapplication.datamodel.UbahPassword;
-import com.example.myapplication.dina.Constants1;
 import com.example.myapplication.models.Agenda1;
+import com.example.myapplication.retrofit.ApiClient;
 import com.example.myapplication.retrofit.StoryClient;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.mlkit.common.sdkinternal.SharedPrefManager;
-import com.example.myapplication.RetrofitClientInstance;
 
 import okhttp3.OkHttpClient;
-import okhttp3.ResponseBody;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -40,10 +32,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapter1.itemAgenda1ClickListener{
 
     private SharedPreferences sharedPreferences;
-    Context context;
     private  SharedPreferences.Editor editor;
     TextView username;
-    String token;
+    String gettoken, token;
 
 
     SharedPrefManager sharedPrefManager;
@@ -53,7 +44,6 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
-
 
         SharedPreferences sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE);
         token = sharedPref.getString("TOKEN","");
@@ -77,7 +67,9 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
     }
 
     public void logout(){
+
         StoryClient client = RetrofitClientInstance.getRetrofitInstance().create(StoryClient.class);
+        Config config = new Config();
 
 
         Call<LogoutResponse> call = client.logout("Bearer " + token );
@@ -85,10 +77,14 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
             @Override
             public void onResponse(Call<LogoutResponse> call, Response<LogoutResponse> response) {
                 if(response.isSuccessful()){
+                    Intent intent = new Intent(HomeScreenActivity.this, LoginActivity.class);
                     LogoutResponse ganti = response.body();
                     Toast.makeText(HomeScreenActivity.this, ganti.getMessage(), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(HomeScreenActivity.this, LoginActivity.class);
+                    sharedPreferences.edit().clear().apply();
                     startActivity(intent);
+
+
+
                 }
             }
 
@@ -97,6 +93,7 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
 
             }
         });
+
     }
 
     private void getUsername() {
