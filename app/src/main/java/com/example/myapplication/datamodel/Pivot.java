@@ -1,34 +1,34 @@
 package com.example.myapplication.datamodel;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Pivot{
-    private Object notes;
-    private int reviewerId;
-    private Object recomendation;
+
+    @SerializedName("examiner_id")
+    private int examinerId;
+
+    @SerializedName("id")
     private int id;
-    private Object position;
-    private int thesisSeminarId;
 
-    public Object getNotes(){
-        return notes;
-    }
+    @SerializedName("position")
+    private int position;
 
-    public int getReviewerId(){
-        return reviewerId;
-    }
+    @SerializedName("thesis_trial_id")
+    private int thesisTrialId;
 
-    public Object getRecomendation(){
-        return recomendation;
+    public int getExaminerId(){
+        return examinerId;
     }
 
     public int getId(){
         return id;
     }
 
-    public Object getPosition(){
+    public int getPosition(){
         return position;
     }
 
-    public int getThesisSeminarId(){
-        return thesisSeminarId;
+    public int getThesisTrialId(){
+        return thesisTrialId;
     }
 }

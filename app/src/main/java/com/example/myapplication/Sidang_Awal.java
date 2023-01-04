@@ -11,9 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.myapplication.adapter.SidangAdapter;
-import com.example.myapplication.datamodel.LogbooksItem;
 import com.example.myapplication.datamodel.RVResponse;
-import com.example.myapplication.datamodel.TesRVResponse;
 import com.example.myapplication.models.Sidang;
 import com.example.myapplication.retrofit.StoryClient;
 
