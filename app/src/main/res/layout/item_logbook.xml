@@ -28,11 +28,37 @@
             app:srcCompat="@drawable/ic_book" />
 
         <TextView
-            android:id="@+id/text_tanggal"
+            android:id="@+id/label_supervised"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="ID Supervised : "
+            android:textColor="#4C4545"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/image_book"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_supervised"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
             android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="1"
+            android:textColor="#4C4545"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/label_supervised"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="214dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/_13_oktober_2022"
             android:textColor="#4C4545"
@@ -41,27 +67,81 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/text_judulKegiatan"
-            android:layout_width="239dp"
+            android:id="@+id/label_progres"
+            android:layout_width="83dp"
             android:layout_height="37dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Progress : "
+            android:textColor="#2E2D2D"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/image_detail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/label_supervised"
+            app:layout_constraintTop_toBottomOf="@+id/label_supervised"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/text_progres"
+            android:layout_width="209dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="84dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="130dp"
             android:fontFamily="sans-serif-black"
             android:text="@string/judul_kegiatan"
             android:textColor="#2E2D2D"
-            android:textSize="19sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/image_detail"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/text_tanggal"
-            app:layout_constraintTop_toBottomOf="@+id/text_tanggal"
+            app:layout_constraintStart_toStartOf="@+id/label_progres"
+            app:layout_constraintTop_toBottomOf="@+id/label_supervised"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/label_problem"
+            android:layout_width="83dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="-9dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Problem  : "
+            android:textColor="#2E2D2D"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/image_detail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/label_progres"
+            app:layout_constraintTop_toBottomOf="@+id/label_progres"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/text_problem"
+            android:layout_width="209dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="-9dp"
+            android:fontFamily="sans-serif-black"
+            android:text="masalah saya gini"
+            android:textColor="#2E2D2D"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/image_detail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/label_problem"
+            app:layout_constraintTop_toBottomOf="@+id/label_progres"
             app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/image_detail"
-            android:layout_width="46dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="22dp"
             android:layout_marginEnd="1dp"
             android:contentDescription="@string/detail"
             app:layout_constraintBottom_toBottomOf="@+id/image_book"

@@ -48,7 +48,7 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
         SharedPreferences sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE);
         token = sharedPref.getString("TOKEN","");
 
-        getUsername();
+//        getUsername();
 
         sharedPrefManager = new SharedPrefManager(this);
 

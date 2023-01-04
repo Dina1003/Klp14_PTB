@@ -4,95 +4,90 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.myapplication.adapter.logbookAdapter;
+import com.example.myapplication.datamodel.ListLogbookResponse;
+import com.example.myapplication.datamodel.LogbooksItem;
+import com.example.myapplication.datamodel.PendaftaranTAResponse;
 import com.example.myapplication.models.logbook;
+import com.example.myapplication.retrofit.StoryClient;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class logbookList extends AppCompatActivity implements logbookAdapter.itemLogbookClickListener{
+import okhttp3.OkHttpClient;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+public class logbookList extends AppCompatActivity{
 
     private RecyclerView rvLogbook;
+    private logbookAdapter adapter;
+    String token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logbook);
 
-
+        SharedPreferences sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE);
+        token = sharedPref.getString("TOKEN", "");
 
         rvLogbook = findViewById(R.id.rv_logbook);
-
-        logbookAdapter adapter = new logbookAdapter(getlogbook());
-        adapter.setListener(this);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-
-        rvLogbook.setLayoutManager(layoutManager);
+        rvLogbook.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new logbookAdapter();
         rvLogbook.setAdapter(adapter);
-    }
-    public ArrayList<logbook> getlogbook(){
-        ArrayList<logbook> listLogbook = new ArrayList<>();
-        listLogbook.add(new logbook(
 
-                "12 Oktober 2022",
-                "Bimbingan 1"
+        String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
 
-        ));
-        listLogbook.add(new logbook(
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(API_BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(new OkHttpClient.Builder().build())
+                .build();
 
-                "13 Oktober 2022",
-                "Bimbingan 2"
+        StoryClient client = retrofit.create(StoryClient.class);
 
-        ));
-        listLogbook.add(new logbook(
+        Call<ListLogbookResponse> call = client.listLogbook("Bearer " + token);
+        call.enqueue(new Callback<ListLogbookResponse>() {
+            @Override
+            public void onResponse(Call<ListLogbookResponse> call, Response<ListLogbookResponse> response) {
+                Log.d("logbook-debug", response.toString());
+                ListLogbookResponse listlogbook = response.body();
+                if (listlogbook != null){
+                    List<LogbooksItem> logbooks = listlogbook.getLogbooks();
+                    adapter.setListLogbook(logbooks);
+                    Log.d("logbook-debug", String.valueOf(logbooks.size()));
+                }
+            }
 
-                "14 Oktober 2022",
-                "Bimbingan 3"
-
-        ));
-        listLogbook.add(new logbook(
-
-                "15 Oktober 2022",
-                "Bimbingan 4"
-
-        ));
-        listLogbook.add(new logbook(
-
-                "16 Oktober 2022",
-                "Bimbingan terakhir"
-
-        ));
-        listLogbook.add(new logbook(
-
-                "17 Oktober 2022",
-                "Bimbingan terakhir tp boong"
-
-        ));
-        listLogbook.add(new logbook(
-
-                "18 Oktober 2022",
-                "Bimbingan terakhir gakdeng"
-
-        ));
-        listLogbook.add(new logbook(
-
-                "19 Oktober 2022",
-                "Bimbingan terakhir beneran"
-
-        ));
-        return listLogbook;
+            @Override
+            public void onFailure(Call<ListLogbookResponse> call, Throwable t) {
+                Toast.makeText(logbookList.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
-    @Override
-    public void onItemLogbookClick(logbook logbook) {
-        Intent detailIntent = new Intent(this, Logbook_Detail.class);
-//        detailIntent.putExtra("tanggal", agenda1.getTanggal());
-        startActivity(detailIntent);
 
-    }
+
+
+//    @Override
+//    public void onItemLogbookClick(logbook logbook) {
+//        Intent detailIntent = new Intent(this, Logbook_Detail.class);
+////        detailIntent.putExtra("tanggal", agenda1.getTanggal());
+//        startActivity(detailIntent);
+//
+//    }
 
     public void balik(View view) {
         Intent intent = new Intent(this, HomeScreenActivity.class);

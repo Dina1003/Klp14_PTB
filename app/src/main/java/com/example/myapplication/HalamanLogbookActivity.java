@@ -23,12 +23,12 @@ public class HalamanLogbookActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_halaman_logbook);
 
-        rvlogbook =findViewById(R.id.rvlogbook);
-        logbookAdapter adapter = new logbookAdapter(getLogbook());
-        LinearLayoutManager layoutManager = new LinearLayoutManager((this));
-
-        rvlogbook.setLayoutManager(layoutManager);
-        rvlogbook.setAdapter(adapter);
+//        rvlogbook =findViewById(R.id.rvlogbook);
+//        logbookAdapter adapter = new logbookAdapter(getLogbook());
+//        LinearLayoutManager layoutManager = new LinearLayoutManager((this));
+//
+//        rvlogbook.setLayoutManager(layoutManager);
+//        rvlogbook.setAdapter(adapter);
 
     }
 

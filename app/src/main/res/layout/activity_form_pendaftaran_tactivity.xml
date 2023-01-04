@@ -8,13 +8,23 @@
     tools:context=".FormPendaftaranTActivity">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/Head"
         android:layout_width="465dp"
         android:layout_height="101dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/yunen" />
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="53dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Head"
+        app:srcCompat="@drawable/logo_unand" />
+
 
     <TextView
         android:id="@+id/judul"
@@ -28,10 +38,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/Head" />
 
     <EditText
-        android:id="@+id/nama"
+        android:id="@+id/judulTA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -42,139 +52,71 @@
         android:paddingEnd="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-        android:hint="Nama Mahasiswa"
+        android:hint="Title"
+        android:textColorHint="@color/material_dynamic_neutral60"
         android:inputType="textPersonName"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
+
         app:layout_constraintEnd_toEndOf="@+id/judul"
         app:layout_constraintHorizontal_bias="0.212"
         app:layout_constraintStart_toStartOf="@+id/judul"
         app:layout_constraintTop_toBottomOf="@+id/judul" />
 
     <EditText
-        android:id="@+id/nim"
+        android:id="@+id/abstrak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/bginput"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textColorHint="@color/material_dynamic_neutral60"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingEnd="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-        android:hint="Nomor Induk Masiswa"
-        android:textColorHint="@color/black"
+        android:hint="Abstract"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/nama"
+        app:layout_constraintEnd_toEndOf="@+id/judulTA"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/nama"
-        app:layout_constraintTop_toBottomOf="@+id/nama" />
+        app:layout_constraintStart_toStartOf="@+id/judulTA"
+        app:layout_constraintTop_toBottomOf="@+id/judulTA" />
 
-    <EditText
-        android:id="@+id/notelp"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/spinner_idlecturer"
+        android:layout_width="355dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/bginput"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:hint="Nomor Telepon"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/nim"
+        android:layout_marginTop="20dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="@+id/abstrak"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/nim"
-        app:layout_constraintTop_toBottomOf="@+id/nim" />
+        app:layout_constraintStart_toStartOf="@+id/abstrak"
+        app:layout_constraintTop_toBottomOf="@+id/abstrak"/>
+
+
 
     <EditText
-        android:id="@+id/prodi"
+        android:id="@+id/posisi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:background="@drawable/bginput"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textColorHint="@color/material_dynamic_neutral60"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingEnd="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-        android:hint="Program Studi"
-        android:textColorHint="@color/black"
+        android:hint="Position"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/notelp"
-        app:layout_constraintStart_toStartOf="@+id/notelp"
-        app:layout_constraintTop_toBottomOf="@+id/notelp" />
+        app:layout_constraintEnd_toEndOf="@+id/abstrak"
+        app:layout_constraintStart_toStartOf="@+id/abstrak"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_idlecturer" />
 
-    <EditText
-        android:id="@+id/pembimbing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bginput"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:hint="Pembimbing"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/prodi"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/prodi"
-        app:layout_constraintTop_toBottomOf="@+id/prodi" />
-
-    <EditText
-        android:id="@+id/judulta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/bginput"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:hint="Judul Tugas Akhir"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/pembimbing"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/pembimbing"
-        app:layout_constraintTop_toBottomOf="@+id/pembimbing" />
-
-    <EditText
-        android:id="@+id/mulai"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/bginput"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:hint="Mulai Dikerjakan"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/judulta"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/judulta"
-        app:layout_constraintTop_toBottomOf="@+id/judulta" />
 
     <ImageButton
         android:id="@+id/daftar"
@@ -183,10 +125,9 @@
         android:layout_marginTop="4dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="daftar"
-        android:onClick="daftar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mulai"
+        app:layout_constraintTop_toBottomOf="@+id/posisi"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/dftar" />
 

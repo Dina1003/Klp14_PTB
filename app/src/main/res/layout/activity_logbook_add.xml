@@ -8,16 +8,17 @@
     tools:context=".Logbook_Add">
 
     <Button
-        android:id="@+id/add"
+        android:id="@+id/tambah_lb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="123dp"
         android:background="@drawable/button_kostum"
         android:text="Tambah LogBook"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/problem"
+        app:layout_constraintTop_toBottomOf="@+id/problem"/>
 
     <ImageView
         android:id="@+id/Head"
@@ -49,63 +50,101 @@
         app:srcCompat="@drawable/ic_back"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-    <EditText
-        android:id="@+id/date"
-        android:layout_width="332dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="45dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="  Hari"
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="FORM TAMBAH LOGBOOK"
         android:textColor="@color/black"
-        android:background="@drawable/text_kostum"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Head" />
 
     <EditText
-        android:id="@+id/tgl"
+        android:id="@+id/supervisor_id"
+        android:layout_width="332dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:layout_marginStart="35dp"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/material_dynamic_neutral60"
+        android:hint="  Supervisor id"
+        android:textColor="@color/black"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/text_kostum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judul" />
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="332dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:ems="15"
+        android:inputType="text"
+        android:hint="  Tanggal"
+        android:textColorHint="@color/material_dynamic_neutral60"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/black"
+        android:background="@drawable/text_kostum"
+        app:layout_constraintEnd_toEndOf="@+id/supervisor_id"
+        app:layout_constraintStart_toStartOf="@+id/supervisor_id"
+        app:layout_constraintTop_toBottomOf="@+id/supervisor_id" />
+
+    <EditText
+        android:id="@+id/progress"
         android:layout_width="332dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="  Tanggal"
+        android:inputType="textLongMessage"
+        android:hint="  Progress"
+        android:textColorHint="@color/material_dynamic_neutral60"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
         android:textColor="@color/black"
         android:background="@drawable/text_kostum"
         app:layout_constraintEnd_toEndOf="@+id/date"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/date"
         app:layout_constraintTop_toBottomOf="@+id/date" />
 
     <EditText
-        android:id="@+id/kegiatan"
+        android:id="@+id/problem"
         android:layout_width="332dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="  Rincian Kegiatan"
+        android:inputType="textLongMessage"
+        android:hint="  Problem"
+        android:textColorHint="@color/material_dynamic_neutral60"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
         android:textColor="@color/black"
         android:background="@drawable/text_kostum"
-        app:layout_constraintEnd_toEndOf="@+id/tgl"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tgl"
-        app:layout_constraintTop_toBottomOf="@+id/tgl" />
-
-    <EditText
-        android:id="@+id/hasil"
-        android:layout_width="332dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="  Rincian Hasil"
-        android:textColor="@color/black"
-        android:background="@drawable/text_kostum"
-        app:layout_constraintEnd_toEndOf="@+id/kegiatan"
+        app:layout_constraintEnd_toEndOf="@+id/progress"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/kegiatan"
-        app:layout_constraintTop_toBottomOf="@+id/kegiatan" />
+        app:layout_constraintStart_toStartOf="@+id/progress"
+        app:layout_constraintTop_toBottomOf="@+id/progress" />
 
 
 
