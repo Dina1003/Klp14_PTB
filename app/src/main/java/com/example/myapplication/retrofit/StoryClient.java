@@ -3,6 +3,9 @@ package com.example.myapplication.retrofit;
 import com.example.myapplication.datamodel.LoginResponse;
 import com.example.myapplication.datamodel.LogoutResponse;
 import com.example.myapplication.datamodel.ProfilResponse;
+import com.example.myapplication.datamodel.RVResponse;
+import com.example.myapplication.datamodel.SemhasResponse;
+import com.example.myapplication.datamodel.TesRVResponse;
 import com.example.myapplication.datamodel.UbahPassword;
 import com.example.myapplication.datamodel.UpdateProfilResponse;
 import com.example.myapplication.datamodel.User;
@@ -27,6 +30,18 @@ public interface StoryClient {
 
     @POST("/api/logout")
     Call<LogoutResponse> logout(@Header("Authorization") String token);
+
+    @GET("/api/theses/309/seminars")
+    Call<SemhasResponse> semhas(@Header("Authorization") String token);
+
+    @GET("/api/list/trials")
+    Call<RVResponse> rvdata(@Header("Authorization") String token);
+
+    //pembuktian buat rv
+    @GET("/api/theses/309/logbooks")
+    Call<TesRVResponse> rvtesdata(@Header("Authorization") String token);
+
+
 
     @FormUrlEncoded
     @POST("/api/password")

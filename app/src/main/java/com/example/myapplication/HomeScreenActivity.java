@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.example.myapplication.adapter.AgendaAdapter1;
 import com.example.myapplication.datamodel.LogoutResponse;
 import com.example.myapplication.datamodel.ProfilResponse;
+import com.example.myapplication.datamodel.SemhasResponse;
 import com.example.myapplication.models.Agenda1;
 import com.example.myapplication.retrofit.ApiClient;
 import com.example.myapplication.retrofit.StoryClient;
@@ -33,7 +34,8 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
 
     private SharedPreferences sharedPreferences;
     private  SharedPreferences.Editor editor;
-    TextView username;
+    TextView username,tanggalsemhas;
+    TextView castName;
     String gettoken, token;
 
 
@@ -45,10 +47,15 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
-        SharedPreferences sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE);
+
+        SharedPreferences sharedPref = getSharedPreferences("prefs", MODE_PRIVATE);
         token = sharedPref.getString("TOKEN","");
 
-        getUsername();
+        tanggalsemhas = findViewById(R.id.tanggalsemhas);
+        castName= findViewById(R.id.tanggalsemhas);
+        //getSeminarAt();
+
+        //getUsername();
 
         sharedPrefManager = new SharedPrefManager(this);
 
@@ -96,7 +103,8 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
 
     }
 
-    private void getUsername() {
+    //di Api juga error
+    /*private void getUsername() {
         String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -132,7 +140,28 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
                 Toast.makeText(HomeScreenActivity.this, t.getMessage().toString(), Toast.LENGTH_SHORT).show();
             }
         });
+    }*/
+
+    private void getSeminarAt() {
+        Config config = new Config();
+        Call<SemhasResponse> call = config.configRetrofit().semhas(token);
+        call.enqueue(new Callback<SemhasResponse>() {
+            @Override
+            public void onResponse(Call<SemhasResponse> call, Response<SemhasResponse> response) {
+                if (!response.isSuccessful()) {
+                    SemhasResponse user = response.body();
+                    String jadwal = user.getSeminarAt();
+                    castName.setText(jadwal);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<SemhasResponse> call, Throwable t) {
+                Toast.makeText(HomeScreenActivity.this, t.getMessage().toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
+
 
     public void profil(View view) {
         Intent intent = new Intent(HomeScreenActivity.this, ProfileActivity.class);

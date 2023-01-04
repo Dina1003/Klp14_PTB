@@ -4,32 +4,101 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
 import com.example.myapplication.adapter.SidangAdapter;
+import com.example.myapplication.datamodel.LogbooksItem;
+import com.example.myapplication.datamodel.RVResponse;
+import com.example.myapplication.datamodel.TesRVResponse;
 import com.example.myapplication.models.Sidang;
+import com.example.myapplication.retrofit.StoryClient;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import okhttp3.OkHttpClient;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Sidang_Awal extends AppCompatActivity implements SidangAdapter.ItemSidangCLickListener{
 
     private RecyclerView rvSidang;
+    private SidangAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sidang_awal);
 
+        SharedPreferences sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE);
+        String token = sharedPref.getString("TOKEN", "");
+
         rvSidang = findViewById(R.id.rvSidang);
+        rvSidang.setLayoutManager(new LinearLayoutManager(this));
 
-        SidangAdapter adapter = new SidangAdapter(getSidang());
-        adapter.setListener(this);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-
-        rvSidang.setLayoutManager(layoutManager);
+        adapter = new SidangAdapter();
         rvSidang.setAdapter(adapter);
+
+        //minta data
+        String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(API_BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(new OkHttpClient.Builder().build())
+                .build();
+        StoryClient client = retrofit.create(StoryClient.class);
+
+        Call<RVResponse> call = client.rvdata(token);
+        call.enqueue(new Callback<RVResponse>() {
+            @Override
+            public void onResponse(Call<RVResponse> call, Response<RVResponse> response) {
+                RVResponse rvResponse = response.body();
+                if (rvResponse != null){
+                    List<Object> seminars = rvResponse.getSeminars();
+                    adapter.setSeminars(seminars);
+                }
+            }
+            @Override
+            public void onFailure(Call<RVResponse> call, Throwable t) {
+
+            }
+        });
+
+
+            //tes rv 2
+        /*Call<TesRVResponse> call = client.rvtesdata(token);
+        call.enqueue(new Callback<TesRVResponse>() {
+            @Override
+            public void onResponse(Call<TesRVResponse> call, Response<TesRVResponse> response) {
+                TesRVResponse tesRVResponse = response.body();
+                if (tesRVResponse != null){
+                    List<LogbooksItem> logbooks = tesRVResponse.getLogbooks();
+                    adapter.setLogbooks(logbooks);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<TesRVResponse> call, Throwable t) {
+
+            }
+        });*/
+
+
+
+        /*SidangAdapter adapter = new SidangAdapter(getSidang());
+        adapter.setListener(this);*/
+        //LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+
+       // rvSidang.setLayoutManager(layoutManager);
+        //rvSidang.setAdapter(adapter);
     }
     public ArrayList<Sidang> getSidang(){
         ArrayList<Sidang> listSidang = new ArrayList<>();
@@ -92,10 +161,10 @@ public class Sidang_Awal extends AppCompatActivity implements SidangAdapter.Item
         startActivity(intent);
     }
 
-    @Override
-    public void onItemSidangClickListener(Sidang sidang) {
-        Intent intent = new Intent(this, DetailSidang.class);
+   // @Override
+   // public void onItemSidangClickListener(Sidang sidang) {
+       /* Intent intent = new Intent(this, DetailSidang.class);
         intent.putExtra("waktu", sidang.getWaktu());
-        startActivity(intent);
-    }
+        startActivity(intent);*/
+    //}
 }
