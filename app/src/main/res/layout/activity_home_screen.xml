@@ -41,7 +41,7 @@
         android:fontFamily="@font/poppins_medium"
         android:text="Aulia Dwi Shaviqa Pohan"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="@+id/profic"
         app:layout_constraintEnd_toStartOf="@+id/iconlogout"
         app:layout_constraintHorizontal_bias="0.0"
@@ -151,11 +151,25 @@
                     android:layout_alignStart="@+id/tanggalsemhas"
                     android:layout_marginStart="0dp"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="7dp"
+                    android:layout_marginTop="5dp"
                     android:fontFamily="@font/poppins_medium"
                     android:text="Jadwal SemHas"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/dosen2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tanggalsemhas"
+                    android:layout_alignStart="@+id/tanggalsemhas"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Jadwal SemHas"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
 
                 <TextView
                     android:id="@+id/tanggalsemhas"
@@ -201,11 +215,25 @@
                     android:layout_alignStart="@+id/tanggalsidang"
                     android:layout_marginStart="0dp"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="7dp"
+                    android:layout_marginTop="5dp"
                     android:fontFamily="@font/poppins_medium"
                     android:text="Jadwal Sidang"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/ruangan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tanggalsidang"
+                    android:layout_alignStart="@+id/tanggalsidang"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Jadwal Sidang"
+                    android:textColor="@color/black"
+                    android:textSize="13dp" />
 
                 <TextView
                     android:id="@+id/tanggalsidang"
@@ -246,6 +274,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="60dp"
+            android:layout_marginLeft="10dp"
             android:fontFamily="@font/poppins_medium"
             android:onClick="image_detailsemhas"
             android:text="Jadwal Semhas"
@@ -267,7 +296,7 @@
             android:layout_height="wrap_content"
             android:layout_row="0"
             android:layout_column="1"
-            android:layout_marginLeft="75dp"
+            android:layout_marginLeft="60dp"
             android:layout_marginBottom="60dp"
             android:fontFamily="@font/poppins_medium"
             android:onClick="detailsidang"
@@ -327,11 +356,25 @@
                 android:layout_alignStart="@+id/textView8"
                 android:layout_marginStart="0dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="2dp"
                 android:fontFamily="@font/poppins_medium"
                 android:text="Catatan LogBook"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView8"
+                android:layout_alignStart="@+id/textView8"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Catatan LogBook"
+                android:textColor="@color/black"
+                android:textSize="13dp" />
 
             <TextView
                 android:id="@+id/textView8"

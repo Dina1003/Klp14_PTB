@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
-import com.example.myapplication.datamodel.LogbooksItem;
 import com.example.myapplication.datamodel.RVResponse;
 import com.example.myapplication.models.Sidang;
 
