@@ -31,16 +31,16 @@ public interface StoryClient {
     @POST("/api/logout")
     Call<LogoutResponse> logout(@Header("Authorization") String token);
 
-    @GET("/api/theses/309/seminars")
+    @GET("/api/theses/309/seminars") // tampil di home
     Call<AmbilSemhasResponse> semhas(@Header("Authorization") String token);
 
-    @GET("/api/list/trials")
+    @GET("/api/list/trials") // tampil di home
     Call<RVResponse> rvdata(@Header("Authorization") String token);
 
-    @GET("/api/theses/277/trials")
+    @GET("/api/theses/277/trials") // sidang list
     Call<AmbilSidangResponse> sidang(@Header("Authorization") String token);
 
-    @GET("/api/theses/200/logbooks/399")
+    @GET("/api/theses/200/logbooks/399") // tes rv, karena list sidang = kosong
     Call<AmbilLogbookResponse> logbook(@Header("Authorization") String token);
 
 

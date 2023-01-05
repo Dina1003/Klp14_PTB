@@ -29,8 +29,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Sidang_Awal extends AppCompatActivity implements SidangAdapter.ItemSidangCLickListener{
 
+    //bagian dina
     private RecyclerView rvSidang;
     private SidangAdapter adapter;
+    String waktu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

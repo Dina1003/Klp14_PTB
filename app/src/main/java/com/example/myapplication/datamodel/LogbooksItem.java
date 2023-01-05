@@ -3,6 +3,8 @@ package com.example.myapplication.datamodel;
 import com.google.gson.annotations.SerializedName;
 
 public class LogbooksItem{
+    //dina,
+    // buat coba di rv list jadwal sidang, karena list sidang = kosong
 
     @SerializedName("date")
     private String date;

@@ -4,6 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class Pivot{
 
+    //bagian dina
     @SerializedName("examiner_id")
     private int examinerId;
 

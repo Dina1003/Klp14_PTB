@@ -4,6 +4,8 @@ import com.google.gson.annotations.SerializedName;
 
 public class ExaminersItem {
 
+    //dina
+
     @SerializedName("birthday")
     private String birthday;
 

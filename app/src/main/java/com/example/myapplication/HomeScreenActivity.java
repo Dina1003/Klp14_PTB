@@ -34,11 +34,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapter1.itemAgenda1ClickListener{
 
+    //bagian dina
+
     private SharedPreferences sharedPreferences;
     private  SharedPreferences.Editor editor;
     TextView username,tanggalsemhas, judulsemhas, dosen2, tanggalsidang, ruangan, judulsidang;
     TextView castName, textView8, textView7, textView9;
-    String gettoken, token;
+    String gettoken, token, detail;
 
 
     SharedPrefManager sharedPrefManager;
