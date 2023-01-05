@@ -14,6 +14,7 @@ import android.view.View;
 import com.example.myapplication.adapter.SidangAdapter;
 import com.example.myapplication.datamodel.LogbooksItem;
 import com.example.myapplication.datamodel.PembuktianRVResponse;
+import com.example.myapplication.datamodel.RVResponse;
 import com.example.myapplication.models.Sidang;
 import com.example.myapplication.retrofit.StoryClient;
 
@@ -59,21 +60,21 @@ public class Sidang_Awal extends AppCompatActivity implements SidangAdapter.Item
                 .build();
         StoryClient client = retrofit.create(StoryClient.class);
 
-        Call<PembuktianRVResponse> call = client.rvtesdata("Bearer " + token);
-        call.enqueue(new Callback<PembuktianRVResponse>() {
+        Call<RVResponse> call = client.rvdata("Bearer " + token);
+        call.enqueue(new Callback<RVResponse>() {
             @Override
-            public void onResponse(Call<PembuktianRVResponse> call, Response<PembuktianRVResponse> response) {
+            public void onResponse(Call<RVResponse> call, Response<RVResponse> response) {
                 Log.d("ListLogbook-Debug", response.toString());
-                PembuktianRVResponse getLogbookResponse = response.body();
+                RVResponse getLogbookResponse = response.body();
                 if(getLogbookResponse != null){
-                    List<LogbooksItem> logbooks = getLogbookResponse.getLogbooks();
+                    List<Object> logbooks = getLogbookResponse.getSeminars();
                     Log.d("ListLogbook-Debug", String.valueOf(logbooks.size()));
-                    adapter.setItemList(logbooks);
+                    adapter.setSeminars(logbooks);
                 }
             }
 
             @Override
-            public void onFailure(Call<PembuktianRVResponse> call, Throwable t) {
+            public void onFailure(Call<RVResponse> call, Throwable t) {
 
             }
         });
