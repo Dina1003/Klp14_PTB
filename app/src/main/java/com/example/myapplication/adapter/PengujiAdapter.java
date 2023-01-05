@@ -20,8 +20,7 @@ import java.util.List;
 public class PengujiAdapter extends RecyclerView.Adapter<PengujiAdapter.PengujiViewHolder> {
 
     //codingan Sidang RV baru ke api
-
-
+    //bagian dina
 
     //1.deklarasi objek
     //private List<Object> seminars = new ArrayList<>();

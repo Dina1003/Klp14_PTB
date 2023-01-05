@@ -1,6 +1,7 @@
 package com.example.myapplication.models;
 
 public class Penguji {
+    //bagian dina
     public String getNama() {
         return nama;
     }

@@ -4,6 +4,8 @@ import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
 public class PembuktianRVResponse{
+    //bagian dina,
+    // buat coba di rv list jadwal sidang, karena list sidang = kosong
 
     @SerializedName("count")
     private int count;

@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class AmbilSidangResponse{
 
+    //dina
     @SerializedName("room_id")
     private Object roomId;
 
