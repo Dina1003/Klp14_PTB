@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
+import com.example.myapplication.datamodel.LogbooksItem;
 import com.example.myapplication.datamodel.RVResponse;
 import com.example.myapplication.models.Sidang;
 
@@ -19,54 +20,37 @@ public class SidangAdapter extends RecyclerView.Adapter<SidangAdapter.SidangView
 
     //codingan Sidang RV baru ke api
 
+
+
     //1.deklarasi objek
-    private List<Object> seminars = new ArrayList<>();
-    //1.b
-    //private List<LogbooksItem> logbooks = new ArrayList<>();
+    //private List<Object> seminars = new ArrayList<>();
+    private List<LogbooksItem> itemList = new ArrayList<>();
+
+
+
+
     //2. buat konstruktor
     public SidangAdapter() {
 
     }
-    public SidangAdapter(List<Object> seminars) {
+    /*public SidangAdapter(List<Object> seminars) {
         this.seminars = seminars;
-    }
-    //2.b
-    /*public  SidangAdapter(){
-
-    }
-
-    public SidangAdapter(List<LogbooksItem> logbooks){
-        this.logbooks = logbooks;
     }*/
+
+    public SidangAdapter(List<LogbooksItem> itemList){
+        this.itemList = itemList;
+    }
 
 
     //3. buat setter
-    public void setSeminars(List<Object> seminars) {
+    /*public void setSeminars(List<Object> seminars) {
         this.seminars = seminars;
-    }
+    }*/
 
-    //3.b
-    /*public void setLogbooks(List<LogbooksItem> logbooks) {
-        this.logbooks = logbooks;
+    public void setItemList(List<LogbooksItem> itemList) {
+        this.itemList = itemList;
         notifyDataSetChanged();
-    }*/
-
-
-
-    //codingan lama
-    /*ArrayList<Sidang> listSidang = new ArrayList<>();
-    ItemSidangCLickListener listener;
-
-    public SidangAdapter(ArrayList<Sidang> listSidang) {
-        this.listSidang = listSidang;
     }
-    public SidangAdapter(ArrayList<Sidang> listSidang, ItemSidangCLickListener listener) {
-        this.listSidang = listSidang;
-        this.listener = listener;
-    }
-    public void setListener(ItemSidangCLickListener listener) {
-        this.listener = listener;
-    }*/
 
 
 
@@ -76,8 +60,6 @@ public class SidangAdapter extends RecyclerView.Adapter<SidangAdapter.SidangView
     public SidangViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_sidang, parent,false);
-        /*View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_sidang, parent, false);*/
         return new SidangViewHolder(view);
     }
 
@@ -86,31 +68,32 @@ public class SidangAdapter extends RecyclerView.Adapter<SidangAdapter.SidangView
     public void onBindViewHolder(@NonNull SidangViewHolder holder, int position) {
         //ambil story yang mau ditampilkan
 
-        RVResponse rvResponse = (RVResponse) seminars.get(position);
-        holder.textwaktu.setText((CharSequence) rvResponse.getSeminars());
+        //RVResponse rvResponse = (RVResponse) seminars.get(position);
+        //holder.textwaktu.setText((CharSequence) rvResponse.getSeminars());
 
         //tes
-        //LogbooksItem tesRVResponse = logbooks.get(position);
-        //holder.textwaktu.setText(tesRVResponse.getProgress());
+        LogbooksItem logbooks = itemList.get(position);
+        holder.textwaktu.setText(logbooks.getDate());
+
     }
 
     @Override
     //4. modif sizenya
     public int getItemCount() {
-        return seminars.size();
+        //return seminars.size();
         //return listSidang.size();
 
         //tes
-        //return logbooks.size();
+        return itemList.size();
     }
 
     public  interface ItemSidangCLickListener{
         //void onItemSidangClickListener(Sidang sidang);
     }
 
-    public void setListSidang(ArrayList<Sidang> listSidang) {
+    /*public void setListSidang(ArrayList<Sidang> listSidang) {
         //this.listSidang = listSidang;
-    }
+    }*/
 
     //7.  modif
     public class SidangViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
