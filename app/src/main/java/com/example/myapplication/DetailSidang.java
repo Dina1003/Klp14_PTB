@@ -49,7 +49,7 @@ public class DetailSidang extends AppCompatActivity {
     private SharedPreferences sharedPreferences;
     private  SharedPreferences.Editor editor;
     TextView text_jadwal, file_report, file_slide, file_journal, startend_at, room_id, online_url, score, grade;
-    String gettoken, token;
+    String gettoken, token,ambil;
     private RecyclerView rvSidang;
     private PengujiAdapter adapter;
 
