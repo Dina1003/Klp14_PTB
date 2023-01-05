@@ -74,7 +74,7 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
             @Override
             public void onClick(View view) {
 
-               logout();
+                logout();
             }
 
 
@@ -449,4 +449,8 @@ public class HomeScreenActivity extends AppCompatActivity implements AgendaAdapt
     }
 
 
+    public void selengkapnya(View view) {
+        Intent intent = new Intent(HomeScreenActivity.this, DetailSidang.class);
+        startActivity(intent);
+    }
 }
