@@ -8,10 +8,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.example.myapplication.adapter.SidangAdapter;
-import com.example.myapplication.datamodel.RVResponse;
+import com.example.myapplication.datamodel.LogbooksItem;
+import com.example.myapplication.datamodel.PembuktianRVResponse;
 import com.example.myapplication.models.Sidang;
 import com.example.myapplication.retrofit.StoryClient;
 
@@ -37,6 +39,7 @@ public class Sidang_Awal extends AppCompatActivity implements SidangAdapter.Item
 
         SharedPreferences sharedPref = getSharedPreferences("prefs", Context.MODE_PRIVATE);
         String token = sharedPref.getString("TOKEN", "");
+        Log.d("ListLogbook-Debug", token);
 
         rvSidang = findViewById(R.id.rvSidang);
         rvSidang.setLayoutManager(new LinearLayoutManager(this));
@@ -54,21 +57,25 @@ public class Sidang_Awal extends AppCompatActivity implements SidangAdapter.Item
                 .build();
         StoryClient client = retrofit.create(StoryClient.class);
 
-        Call<RVResponse> call = client.rvdata(token);
-        call.enqueue(new Callback<RVResponse>() {
+        Call<PembuktianRVResponse> call = client.rvtesdata("Bearer " + token);
+        call.enqueue(new Callback<PembuktianRVResponse>() {
             @Override
-            public void onResponse(Call<RVResponse> call, Response<RVResponse> response) {
-                RVResponse rvResponse = response.body();
-                if (rvResponse != null){
-                    List<Object> seminars = rvResponse.getSeminars();
-                    adapter.setSeminars(seminars);
+            public void onResponse(Call<PembuktianRVResponse> call, Response<PembuktianRVResponse> response) {
+                Log.d("ListLogbook-Debug", response.toString());
+                PembuktianRVResponse getLogbookResponse = response.body();
+                if(getLogbookResponse != null){
+                    List<LogbooksItem> logbooks = getLogbookResponse.getLogbooks();
+                    Log.d("ListLogbook-Debug", String.valueOf(logbooks.size()));
+                    adapter.setItemList(logbooks);
                 }
             }
+
             @Override
-            public void onFailure(Call<RVResponse> call, Throwable t) {
+            public void onFailure(Call<PembuktianRVResponse> call, Throwable t) {
 
             }
         });
+
 
 
             //tes rv 2

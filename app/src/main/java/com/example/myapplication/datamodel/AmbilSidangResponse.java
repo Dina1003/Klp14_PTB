@@ -23,8 +23,8 @@ public class AmbilSidangResponse{
     @SerializedName("method")
     private int method;
 
-    @SerializedName("examiners")
-    private List<ExaminersItem> examiners;
+    //@SerializedName("examiners")
+    //private List<ExaminersItem> examiners;
 
     @SerializedName("file_report")
     private Object fileReport;
@@ -89,9 +89,9 @@ public class AmbilSidangResponse{
         return method;
     }
 
-    public List<ExaminersItem> getExaminers(){
-        return examiners;
-    }
+    //public List<ExaminersItem> getExaminers(){
+        //return examiners;
+    //}
 
     public Object getFileReport(){
         return fileReport;

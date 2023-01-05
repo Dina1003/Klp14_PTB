@@ -38,8 +38,6 @@ public class AmbilSemhasResponse{
     @SerializedName("reviewers")
     private List<ReviewersItem> reviewers;
 
-    @SerializedName("peserta")
-    private List<PesertaItem> peserta;
 
     @SerializedName("file_journal")
     private String fileJournal;
@@ -103,9 +101,6 @@ public class AmbilSemhasResponse{
         return reviewers;
     }
 
-    public List<PesertaItem> getPeserta(){
-        return peserta;
-    }
 
     public String getFileJournal(){
         return fileJournal;

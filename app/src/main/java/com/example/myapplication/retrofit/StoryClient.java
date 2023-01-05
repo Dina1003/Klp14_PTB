@@ -5,13 +5,12 @@ import com.example.myapplication.datamodel.AmbilSemhasResponse;
 import com.example.myapplication.datamodel.AmbilSidangResponse;
 import com.example.myapplication.datamodel.LoginResponse;
 import com.example.myapplication.datamodel.LogoutResponse;
+import com.example.myapplication.datamodel.PembuktianRVResponse;
 import com.example.myapplication.datamodel.ProfilResponse;
 import com.example.myapplication.datamodel.RVResponse;
 import com.example.myapplication.datamodel.UbahPassword;
 import com.example.myapplication.datamodel.UpdateProfilResponse;
-import com.example.myapplication.datamodel.User;
 
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -46,8 +45,8 @@ public interface StoryClient {
 
 
     //pembuktian buat rv
-    //@GET("/api/theses/309/logbooks")
-    //Call<TesRVResponse> rvtesdata(@Header("Authorization") String token);
+    @GET("/api/theses/309/logbooks")
+    Call<PembuktianRVResponse> rvtesdata(@Header("Authorization") String token);
 
 
 
