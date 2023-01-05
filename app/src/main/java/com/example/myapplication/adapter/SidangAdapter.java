@@ -23,8 +23,8 @@ public class SidangAdapter extends RecyclerView.Adapter<SidangAdapter.SidangView
 
 
     //1.deklarasi objek
-    //private List<Object> seminars = new ArrayList<>();
-    private List<LogbooksItem> itemList = new ArrayList<>();
+    private List<Object> seminars = new ArrayList<>();
+    //private List<LogbooksItem> itemList = new ArrayList<>();
 
 
 
@@ -33,24 +33,24 @@ public class SidangAdapter extends RecyclerView.Adapter<SidangAdapter.SidangView
     public SidangAdapter() {
 
     }
-    /*public SidangAdapter(List<Object> seminars) {
+    public SidangAdapter(List<Object> seminars) {
         this.seminars = seminars;
-    }*/
-
-    public SidangAdapter(List<LogbooksItem> itemList){
-        this.itemList = itemList;
     }
+
+    //public SidangAdapter(List<LogbooksItem> itemList){
+        //this.itemList = itemList;
+   // }
 
 
     //3. buat setter
-    /*public void setSeminars(List<Object> seminars) {
+    public void setSeminars(List<Object> seminars) {
         this.seminars = seminars;
-    }*/
+    }
 
-    public void setItemList(List<LogbooksItem> itemList) {
+    /*public void setItemList(List<LogbooksItem> itemList) {
         this.itemList = itemList;
         notifyDataSetChanged();
-    }
+    }*/
 
 
 
@@ -68,23 +68,23 @@ public class SidangAdapter extends RecyclerView.Adapter<SidangAdapter.SidangView
     public void onBindViewHolder(@NonNull SidangViewHolder holder, int position) {
         //ambil story yang mau ditampilkan
 
-        //RVResponse rvResponse = (RVResponse) seminars.get(position);
-        //holder.textwaktu.setText((CharSequence) rvResponse.getSeminars());
+        RVResponse rvResponse = (RVResponse) seminars.get(position);
+        holder.textwaktu.setText((CharSequence) rvResponse.getSeminars());
 
         //tes
-        LogbooksItem logbooks = itemList.get(position);
-        holder.textwaktu.setText(logbooks.getDate());
+        //LogbooksItem logbooks = itemList.get(position);
+        //holder.textwaktu.setText(logbooks.getDate());
 
     }
 
     @Override
     //4. modif sizenya
     public int getItemCount() {
-        //return seminars.size();
+        return seminars.size();
         //return listSidang.size();
 
         //tes
-        return itemList.size();
+        //return itemList.size();
     }
 
     public  interface ItemSidangCLickListener{
