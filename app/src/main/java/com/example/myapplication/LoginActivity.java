@@ -66,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void login(View view) {
-        Intent intent = new Intent(LoginActivity.this, home_kosong.class);
+        Intent intent = new Intent(LoginActivity.this, ListSeminarTugasAkhirActivity.class);
         startActivity(intent);
     }
 
@@ -114,7 +114,7 @@ public class LoginActivity extends AppCompatActivity {
                         editor.apply();
 
 
-                        Intent mainIntent = new Intent(LoginActivity.this, home_kosong.class);
+                        Intent mainIntent = new Intent(LoginActivity.this, ListSeminarTugasAkhirActivity.class);
                         startActivity(mainIntent);
                     }
                 } else {

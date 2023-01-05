@@ -15,7 +15,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 public class home_kosong extends AppCompatActivity {
 
-    private static final String TAG = "Token Firebase";
+//    private static final String TAG = "Token Firebase";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,24 +23,24 @@ public class home_kosong extends AppCompatActivity {
         setContentView(R.layout.activity_home_kosong);
 
         //notifikasi firebase
-        FirebaseMessaging.getInstance().getToken()
-                .addOnCompleteListener(new OnCompleteListener<String>() {
-                    @Override
-                    public void onComplete(@NonNull Task<String> task) {
-                        if (!task.isSuccessful()) {
-                            Log.w(TAG, "Fetching FCM registration token failed", task.getException());
-                            return;
-                        }
-
-                        // Get new FCM registration token
-                        String token = task.getResult();
-
-                        // Log and toast
-
-                        Log.d(TAG, token);
-                        Toast.makeText(home_kosong.this, token, Toast.LENGTH_SHORT).show();
-                    }
-                });
+//        FirebaseMessaging.getInstance().getToken()
+//                .addOnCompleteListener(new OnCompleteListener<String>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<String> task) {
+//                        if (!task.isSuccessful()) {
+//                            Log.w(TAG, "Fetching FCM registration token failed", task.getException());
+//                            return;
+//                        }
+//
+//                        // Get new FCM registration token
+//                        String token = task.getResult();
+//
+//                        // Log and toast
+//
+//                        Log.d(TAG, token);
+//                        Toast.makeText(home_kosong.this, token, Toast.LENGTH_SHORT).show();
+//                    }
+//                });
     }
 
     public void out(View view) {

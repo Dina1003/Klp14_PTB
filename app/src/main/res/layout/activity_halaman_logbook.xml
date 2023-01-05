@@ -32,7 +32,7 @@
         app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textLogbook"
-        tools:listitem="@layout/logbook" />
+        tools:listitem="@layout/item_seminar" />
 
     <ImageView
         android:id="@+id/backk"
